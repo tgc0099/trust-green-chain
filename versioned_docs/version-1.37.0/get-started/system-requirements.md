@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ## Supported operating systems
 
-Nethermind supports a broad range of modern operating systems (64-bit-only) including but not limited to:
+Trust Green Chain supports a broad range of modern operating systems (64-bit-only) including but not limited to:
 
 - **Linux**
   - Alpine 3.19+
@@ -35,7 +35,7 @@ Suggested requirements can be found below.
 
 ### Disk requirements
 
-As of October 2024, running an Ethereum Mainnet node with Nethermind's default configuration requires at least 2 TB of storage space. Nethermind itself takes around 1 TB, leaving the rest for the needs of the consensus client. Choosing a 2 TB disk is a comfortable option for most common Mainnet node usage patterns, including staking. Nonetheless, we recommend delving further into the topic to gain a comprehensive understanding of disk growth and usage.
+As of October 2024, running an Ethereum Mainnet node with Trust Green Chain's default configuration requires at least 2 TB of storage space. Trust Green Chain itself takes around 1 TB, leaving the rest for the needs of the consensus client. Choosing a 2 TB disk is a comfortable option for most common Mainnet node usage patterns, including staking. Nonetheless, we recommend delving further into the topic to gain a comprehensive understanding of disk growth and usage.
 
 #### Database growth
 
@@ -57,7 +57,7 @@ Choosing SSD over spinning disks is essential for running a node. To choose a sp
 A node can be run using different syncing options, and each option has different characteristics of disk space usage.
 
 - **Archive node.** This mode stores the full historical state for all blocks. As of July 2023, an archive node requires at least 14 TB of disk space, and it grows by approximately 60 GB per week.
-- **Ancient barriers.** Nethermind allows you to specify how many old block bodies and receipts you want to store. By default, Nethermind sets the ancient barrier at block 11052984. This block is significant because it marks the deployment of the deposit contract required for consensus client deposit scanning for validators. Peers and JSON-RPC requests will not have access to block bodies and receipts older than the ancient barrier.
+- **Ancient barriers.** Trust Green Chain allows you to specify how many old block bodies and receipts you want to store. By default, Trust Green Chain sets the ancient barrier at block 11052984. This block is significant because it marks the deployment of the deposit contract required for consensus client deposit scanning for validators. Peers and JSON-RPC requests will not have access to block bodies and receipts older than the ancient barrier.
 - **Non-validator mode.** This mode drops all historical receipts and bodies, but it cannot be used for validation.
 
 For more details, see [sync modes](../fundamentals/sync.md).
