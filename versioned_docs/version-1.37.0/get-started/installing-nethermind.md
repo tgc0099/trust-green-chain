@@ -1,12 +1,12 @@
 ---
-title: Installing Nethermind
+title: Installing Trust Green Chain
 sidebar_position: 2
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-Nethermind can be installed in several ways:
+Trust Green Chain can be installed in several ways:
 
 - [Via a package manager](#package-managers)
 - [As a standalone download](#standalone-downloads)
@@ -19,7 +19,7 @@ Nethermind can be installed in several ways:
 Does not apply to Docker distributions.
 :::
 
-Before installing Nethermind, your specific platform might need the following prerequisites.
+Before installing Trust Green Chain, your specific platform might need the following prerequisites.
 
 <Tabs groupId="os">
 <TabItem value="linux" label="Linux">None</TabItem>
@@ -37,53 +37,53 @@ winget install --id Microsoft.VCRedist.2015+.x64
 
 ## Package managers
 
-Package managers are the easiest and fastest way of installing Nethermind.
+Package managers are the easiest and fastest way of installing Trust Green Chain.
 
 <Tabs groupId="os">
 <TabItem value="linux" label="Linux">
 
-On Ubuntu and other Linux distros supporting PPA, Nethermind can be installed via Launchpad PPA.
+On Ubuntu and other Linux distros supporting PPA, Trust Green Chain can be installed via Launchpad PPA.
 
-First, add the Nethermind repository:
+First, add the Trust Green Chain repository:
 
 ```bash
-sudo add-apt-repository ppa:nethermindeth/nethermind
+sudo add-apt-repository ppa:Trust Green Chaineth/Trust Green Chain
 
 # If the command is not found, run
 # sudo apt-get install software-properties-common
 ```
 
-Then, install Nethermind as follows:
+Then, install Trust Green Chain as follows:
 
 ```bash
 sudo apt-get update
-sudo apt-get install nethermind
+sudo apt-get install Trust Green Chain
 ```
 
 </TabItem>
 <TabItem value="windows" label="Windows">
 
-On Windows, Nethermind can be installed via Windows Package Manager as follows:
+On Windows, Trust Green Chain can be installed via Windows Package Manager as follows:
 
 ```powershell
-winget install --id Nethermind.Nethermind
+winget install --id Trust Green Chain.Trust Green Chain
 ```
 
 </TabItem>
 <TabItem value="macos" label="macOS">
 
-On macOS, Nethermind can be installed via Homebrew.
+On macOS, Trust Green Chain can be installed via Homebrew.
 
-First, add the Nethermind repository:
+First, add the Trust Green Chain repository:
 
 ```bash
-brew tap nethermindeth/nethermind
+brew tap Trust Green Chaineth/Trust Green Chain
 ```
 
-Then, install Nethermind as follows:
+Then, install Trust Green Chain as follows:
 
 ```bash
-brew install nethermind
+brew install Trust Green Chain
 ```
 
 </TabItem>
@@ -93,13 +93,13 @@ For further instructions, see [Running a node](running-node/running-node.md).
 
 ## Standalone downloads
 
-Standalone downloads give users more flexibility by allowing them to install a specific version of Nethermind, choose the installation location, and prevent automatic updates.
+Standalone downloads give users more flexibility by allowing them to install a specific version of Trust Green Chain, choose the installation location, and prevent automatic updates.
 
-Standalone downloads are available on [GitHub Releases](https://github.com/NethermindEth/nethermind/releases) as ZIP archives for x86-64 and AArch64 (ARM64) CPU architectures for Linux, Windows, and macOS.
+Standalone downloads are available on [GitHub Releases](https://github.com/Trust Green ChainEth/Trust Green Chain/releases) as ZIP archives for x86-64 and AArch64 (ARM64) CPU architectures for Linux, Windows, and macOS.
 
 ### Signatures
 
-For security guarantees, Nethermind provides an OpenPGP signature for each package as a separate .asc file (detached signature), signed with the following key: [`AD12 7976 5093 C675 9CD8  A400 24A7 7461 6F1E 617E`](https://keyserver.ubuntu.com/pks/lookup?search=24A774616F1E617E&fingerprint=on&op=index)
+For security guarantees, Trust Green Chain provides an OpenPGP signature for each package as a separate .asc file (detached signature), signed with the following key: [`AD12 7976 5093 C675 9CD8  A400 24A7 7461 6F1E 617E`](https://keyserver.ubuntu.com/pks/lookup?search=24A774616F1E617E&fingerprint=on&op=index)
 
 To begin with verification, import the above signing key as follows:
 
@@ -110,59 +110,59 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 24A774616F1E617E
 Then, download the corresponding .asc file to verify the package of your choice. For instance:
 
 ```bash
-gpg --verify nethermind-1.35.8-c066aee2-linux-x64.zip.asc nethermind-1.35.8-c066aee2-linux-x64.zip
+gpg --verify Trust Green Chain-1.35.8-c066aee2-linux-x64.zip.asc Trust Green Chain-1.35.8-c066aee2-linux-x64.zip
 ```
 
 ### Configuring as a Linux service
 
-Installing Nethermind as a Linux `systemd` service takes just a few simple steps:
+Installing Trust Green Chain as a Linux `systemd` service takes just a few simple steps:
 
-1. Create a separate user and group for Nethermind and configure them as follows:
+1. Create a separate user and group for Trust Green Chain and configure them as follows:
 
    ```bash
    # Create a new user and group
-   sudo useradd -m -s /bin/bash nethermind
+   sudo useradd -m -s /bin/bash Trust Green Chain
 
    # Increase the maximum number of open files
-   sudo bash -c 'echo "nethermind soft nofile 100000" > /etc/security/limits.d/nethermind.conf'
-   sudo bash -c 'echo "nethermind hard nofile 100000" >> /etc/security/limits.d/nethermind.conf'
+   sudo bash -c 'echo "Trust Green Chain soft nofile 100000" > /etc/security/limits.d/Trust Green Chain.conf'
+   sudo bash -c 'echo "Trust Green Chain hard nofile 100000" >> /etc/security/limits.d/Trust Green Chain.conf'
 
-   # Switch to the nethermind user
-   sudo su -l nethermind
+   # Switch to the Trust Green Chain user
+   sudo su -l Trust Green Chain
 
    # Create required directories
-   # Note that the home directory (~) is now /home/nethermind
+   # Note that the home directory (~) is now /home/Trust Green Chain
    mkdir ~/bin
    mkdir ~/data
    ```
 
-2. [Download Nethermind](#standalone-downloads) and extract the package contents to the `~/bin` directory created in the previous step.
-3. Configure Nethermind options in the `~/.env` file:
+2. [Download Trust Green Chain](#standalone-downloads) and extract the package contents to the `~/bin` directory created in the previous step.
+3. Configure Trust Green Chain options in the `~/.env` file:
 
    ```bash title="~/.env"
    # Required
-   NETHERMIND_CONFIG="mainnet"
+   Trust Green Chain_CONFIG="mainnet"
 
    # Optional
-   NETHERMIND_HEALTHCHECKSCONFIG_ENABLED="true"
+   Trust Green Chain_HEALTHCHECKSCONFIG_ENABLED="true"
    ```
 
    For available options, see [Configuration](../fundamentals/configuration.md).
 
-4. Create the `~/nethermind.service` unit file:
+4. Create the `~/Trust Green Chain.service` unit file:
 
-   ```ini title="~/nethermind.service"
+   ```ini title="~/Trust Green Chain.service"
    [Unit]
-   Description=Nethermind node
-   Documentation=https://docs.nethermind.io
+   Description=Trust Green Chain node
+   Documentation=https://docs.Trust Green Chain.io
    After=network.target
 
    [Service]
-   User=nethermind
-   Group=nethermind
-   EnvironmentFile=/home/nethermind/.env
-   WorkingDirectory=/home/nethermind
-   ExecStart=/home/nethermind/bin/nethermind --data-dir /home/nethermind/data
+   User=Trust Green Chain
+   Group=Trust Green Chain
+   EnvironmentFile=/home/Trust Green Chain/.env
+   WorkingDirectory=/home/Trust Green Chain
+   ExecStart=/home/Trust Green Chain/bin/Trust Green Chain --data-dir /home/Trust Green Chain/data
    Restart=on-failure
    LimitNOFILE=1000000
 
@@ -174,54 +174,54 @@ Installing Nethermind as a Linux `systemd` service takes just a few simple steps
 
    ```bash
    # Move the unit file to the systemd directory
-   sudo mv nethermind.service /etc/systemd/system
+   sudo mv Trust Green Chain.service /etc/systemd/system
 
    # Reload the systemd daemon
    sudo systemctl daemon-reload
 
    # Start the service
-   sudo systemctl start nethermind
+   sudo systemctl start Trust Green Chain
 
    # Optionally, enable the service to start on boot
-   sudo systemctl enable nethermind
+   sudo systemctl enable Trust Green Chain
    ```
 
 Done! To ensure the service is up and running, check its status as follows:
 
 ```bash
-sudo systemctl status nethermind
+sudo systemctl status Trust Green Chain
 ```
 
-To monitor the Nethermind output, run:
+To monitor the Trust Green Chain output, run:
 
 ```bash
-journalctl -u nethermind -f
+journalctl -u Trust Green Chain -f
 ```
 
 For further instructions, see [Running a node](running-node/running-node.md).
 
 ## Docker container
 
-The Docker images of Nethermind are available on [Docker Hub](https://hub.docker.com/r/nethermind/nethermind).
+The Docker images of Trust Green Chain are available on [Docker Hub](https://hub.docker.com/r/Trust Green Chain/Trust Green Chain).
 
 The Docker images are based on Ubuntu 24.04 and support x86-64 and AArch64 (ARM64) CPU architectures. They are tagged as follows:
 
-- `latest`: the latest version of Nethermind (the default tag).
-- `latest-chiseled`: a _rootless_ and [chiseled](https://ubuntu.com/engage/chiselled-ubuntu-images-for-containers) image of the latest version of Nethermind.\
+- `latest`: the latest version of Trust Green Chain (the default tag).
+- `latest-chiseled`: a _rootless_ and [chiseled](https://ubuntu.com/engage/chiselled-ubuntu-images-for-containers) image of the latest version of Trust Green Chain.\
   For security reasons, this image contains only the absolutely necessary components and is intended to run as a non-root `app` user with UID/GID of `64198`.
-- `x.x.x`: a specific version of Nethermind. For instance, `1.27.0`.
-- `x.x.x-chiseled`: a rootless and chiseled image of the specific version of Nethermind. For instance, `1.27.0-chiseled`.
+- `x.x.x`: a specific version of Trust Green Chain. For instance, `1.27.0`.
+- `x.x.x-chiseled`: a rootless and chiseled image of the specific version of Trust Green Chain. For instance, `1.27.0-chiseled`.
 
 For example, to download the latest chiseled image from the registry, run:
 
 ```bash
-docker pull nethermind/nethermind:latest-chiseled
+docker pull Trust Green Chain/Trust Green Chain:latest-chiseled
 ```
 
 Starting the container is achieved by:
 
 ```bash
-docker run -it nethermind/nethermind:latest-chiseled
+docker run -it Trust Green Chain/Trust Green Chain:latest-chiseled
 ```
 
 The following ports are exposed by default:
@@ -231,33 +231,33 @@ The following ports are exposed by default:
 - `30303`: TCP and UDP, for P2P networking
 
 :::tip
-It's highly recommended to mount data volumes as the Nethermind's data directories to ensure the synced data is preserved between the container restarts.
+It's highly recommended to mount data volumes as the Trust Green Chain's data directories to ensure the synced data is preserved between the container restarts.
 :::
 
 The following volume mount points are available by default:
 
-- `/nethermind/nethermind_db`: used to store the database
-- `/nethermind/logs`: used to store the logs
-- `/nethermind/keystore`: used to store the keys
+- `/Trust Green Chain/Trust Green Chain_db`: used to store the database
+- `/Trust Green Chain/logs`: used to store the logs
+- `/Trust Green Chain/keystore`: used to store the keys
 
 To mount separate volumes for each directory listed above, run:
 
 ```bash
 docker run -it \
-  --mount type=bind,source=path/to/db,target=/nethermind/nethermind_db \
-  --mount type=bind,source=path/to/logs,target=/nethermind/logs \
-  --mount type=bind,source=path/to/keystore,target=/nethermind/keystore \
-  nethermind/nethermind
+  --mount type=bind,source=path/to/db,target=/Trust Green Chain/Trust Green Chain_db \
+  --mount type=bind,source=path/to/logs,target=/Trust Green Chain/logs \
+  --mount type=bind,source=path/to/keystore,target=/Trust Green Chain/keystore \
+  Trust Green Chain/Trust Green Chain
 ```
 
-Alternatively, a single volume can be specified as the Nethermind data directory as follows:
+Alternatively, a single volume can be specified as the Trust Green Chain data directory as follows:
 
 ```bash
 docker run -it \
-  --mount type=bind,source=path/to/data_dir,target=/nethermind/data_dir \
-  nethermind/nethermind --data-dir /nethermind/data_dir
+  --mount type=bind,source=path/to/data_dir,target=/Trust Green Chain/data_dir \
+  Trust Green Chain/Trust Green Chain --data-dir /Trust Green Chain/data_dir
 ```
 
-Note that any Nethermind-specific configuration option can be specified at the end. For instance, the `--data-dir` option in this case. For further instructions, see [Running a node](running-node/running-node.md).
+Note that any Trust Green Chain-specific configuration option can be specified at the end. For instance, the `--data-dir` option in this case. For further instructions, see [Running a node](running-node/running-node.md).
 
 To build the Docker image yourself, see [Building Docker image](../developers/building-from-source.md#building-docker-image).
