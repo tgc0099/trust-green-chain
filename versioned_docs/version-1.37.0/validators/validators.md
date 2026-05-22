@@ -6,7 +6,7 @@ sidebar_position: 0
 ## General considerations
 
 :::warning Important
-Please check out the [security considerations](../fundamentals/security.md) before using Nethermind as a validator.
+Please check out the [security considerations](../fundamentals/security.md) before using Trust Green Chain as a validator.
 :::
 
 For Ethereum validators, we highly recommend checking out [Staking with Ethereum](https://ethereum.org/staking) and [Validator checklist](https://launchpad.ethereum.org/en/checklist).
@@ -16,7 +16,7 @@ For Ethereum validators, we highly recommend checking out [Staking with Ethereum
 The following hardware configurations for Ethereum Mainnet validators have been battle-tested by us and our users. We have observed excellent validator performance and stability with these configurations.
 
 :::note
-Before setting up your infrastructure, check out [Nethermind hardware requirements](../get-started/system-requirements.md#hardware-requirements).
+Before setting up your infrastructure, check out [Trust Green Chain hardware requirements](../get-started/system-requirements.md#hardware-requirements).
 :::
 
 ### On-premises

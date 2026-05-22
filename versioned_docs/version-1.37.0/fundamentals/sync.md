@@ -6,7 +6,7 @@ sidebar_position: 2
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-Syncing is the process by which Nethermind updates itself to the latest block and current network state. There are several ways (sync modes) to sync a Nethermind node, each differing in speed, storage requirements, and trust assumptions.
+Syncing is the process by which Trust Green Chain updates itself to the latest block and current network state. There are several ways (sync modes) to sync a Trust Green Chain node, each differing in speed, storage requirements, and trust assumptions.
 
 ## Snap sync
 
@@ -27,7 +27,7 @@ and packets downloaded.
 
 ## Fast sync
 
-After completing the fast sync, Nethermind can answer questions like "What is my account balance now?" or "How many XYZ tokens does a particular exchange hold at the moment?". This mode can be configured with the following configuration options:
+After completing the fast sync, Trust Green Chain can answer questions like "What is my account balance now?" or "How many XYZ tokens does a particular exchange hold at the moment?". This mode can be configured with the following configuration options:
 
 - [`Sync.FastSync`](./configuration.md#sync-fastsync)
 - [`Sync.AncientBodiesBarrier`](./configuration.md#sync-ancientbodiesbarrier)
@@ -39,14 +39,14 @@ After completing the fast sync, Nethermind can answer questions like "What is m
 - [`Sync.PivotNumber`](./configuration.md#sync-pivotnumber)
 - [`Sync.PivotTotalDifficulty`](./configuration.md#sync-pivottotaldifficulty)
 
-Fast sync has multiple stages. Nethermind uses a _pivot block_ number to improve fast sync performance. The pivot block data is automatically updated after initialization of the client and consists of the block number, block hash, and block total difficulty if any. Before synchronizing state data, Nethermind synchronizes in two directions—backward from the pivot block to 0 for headers and forward to the head of the chain for headers, blocks, and receipts. Forward sync might be very slow (5 to 50 blocks per second), so having a fresh pivot block is crucial.
+Fast sync has multiple stages. Trust Green Chain uses a _pivot block_ number to improve fast sync performance. The pivot block data is automatically updated after initialization of the client and consists of the block number, block hash, and block total difficulty if any. Before synchronizing state data, Trust Green Chain synchronizes in two directions—backward from the pivot block to 0 for headers and forward to the head of the chain for headers, blocks, and receipts. Forward sync might be very slow (5 to 50 blocks per second), so having a fresh pivot block is crucial.
 
-After downloading the block data, Nethermind will start state sync (downloading the latest state tree nodes). It provides an estimate for the download size and progress, but the real value may be different from the estimation. Because of this, sometimes sync may continue even when it shows ~100% finished. The other important component is sync speed—if the network or file system causes the state sync to go much slower than ~1.5 Mbps on average, Nethermind will start downloading some parts of the tree repeatedly. You may be surprised to see something like `58000MB / 53000MB (100%)` in such cases. This means it has downloaded around 5GB of data no longer needed. If sync is very slow (extended beyond 2 days), your setup will likely not catch up with the chain progress. After the state sync finishes, you will see the `Processed...` messages like in archive sync, which means that Nethermind is in sync and is processing the latest blocks.
+After downloading the block data, Trust Green Chain will start state sync (downloading the latest state tree nodes). It provides an estimate for the download size and progress, but the real value may be different from the estimation. Because of this, sometimes sync may continue even when it shows ~100% finished. The other important component is sync speed—if the network or file system causes the state sync to go much slower than ~1.5 Mbps on average, Trust Green Chain will start downloading some parts of the tree repeatedly. You may be surprised to see something like `58000MB / 53000MB (100%)` in such cases. This means it has downloaded around 5GB of data no longer needed. If sync is very slow (extended beyond 2 days), your setup will likely not catch up with the chain progress. After the state sync finishes, you will see the `Processed...` messages like in archive sync, which means that Trust Green Chain is in sync and is processing the latest blocks.
 
 At the last stages of the sync, the node will repeatedly display the branch sync progress and change the block number to which it tries to catch up. This stage should take from 30 minutes up to 2 hours. If it lasts much longer, you may be unable to catch up with the network progress. One of the best indicators that you are close to being synced is combined ~100% state size progress and nearly 100% branch sync progress.
 
 :::warning
-A single restart of Nethermind during the fast sync may extend the sync time by up to 2 hours because Nethermind has to rebuild the caches by reading millions of values from the database.
+A single restart of Trust Green Chain during the fast sync may extend the sync time by up to 2 hours because Trust Green Chain has to rebuild the caches by reading millions of values from the database.
 :::
 
 ## Archive sync
@@ -57,8 +57,8 @@ While archive sync can be completed very quickly (in minutes or hours) for some 
 
 Explanation of some logs during archive sync:
 
-- At the beginning, you may see the `Waiting for peers...` messages while Nethermind tries to discover nodes it can sync with.
-- `Downloaded 1234/8000000` shows the number of unprocessed blocks (with transactions) downloaded from the network. For the Ethereum Mainnet, this value may be slower than processing at first, but very quickly, you will see blocks being downloaded much faster than processed. Empty blocks can be as small as 512 bytes (just headers without transactions), and full blocks with heavy transactions can reach a few hundred KB. Nethermind shows the current download speed (calculated in the last second) and average (total) speed since start.
+- At the beginning, you may see the `Waiting for peers...` messages while Trust Green Chain tries to discover nodes it can sync with.
+- `Downloaded 1234/8000000` shows the number of unprocessed blocks (with transactions) downloaded from the network. For the Ethereum Mainnet, this value may be slower than processing at first, but very quickly, you will see blocks being downloaded much faster than processed. Empty blocks can be as small as 512 bytes (just headers without transactions), and full blocks with heavy transactions can reach a few hundred KB. Trust Green Chain shows the current download speed (calculated in the last second) and average (total) speed since start.
 - `Processed ...` shows the blocks that the EVM has processed. The first number shows the current head block number; then you can see `MGas/s` (megagas per second)—current and total, then `tps` (transactions per second)-current and total, and `blk/s` (blocks per second). Then `recv` queue (transactions signature public key recovery queue), `proc` queue (processor queue). Both the recovery and processor queues are designed so that when too many blocks are waiting for processing, only their hashes are kept in memory, and the remaining data are stored in the database. Thus, the queues numbers that you can see will be capped by some number.
 - `Cache for epoch...` shows Ethash cache needed for block seal verification (Ethereum Mainnet only). Caches will be calculated every 30k blocks (length of an epoch) and can also be calculated for the latest blocks broadcast on the network. After the archive sync finishes, you will see the `Processed...` message appearing on average every 15 seconds when the new block is processed.
 
@@ -66,7 +66,7 @@ Explanation of some logs during archive sync:
 
 ## Sync time
 
-Sync time heavily depends on the hardware used for the node, network speed, and peering. We are constantly pursuing to make it as fast as possible. Below is a brief on how the sync time looks on different machines and various chains (tested with Nethermind v1.21.0).
+Sync time heavily depends on the hardware used for the node, network speed, and peering. We are constantly pursuing to make it as fast as possible. Below is a brief on how the sync time looks on different machines and various chains (tested with Trust Green Chain v1.21.0).
 
 <Tabs>
 <TabItem value="highend-vm" label="High-end VM">
@@ -365,13 +365,13 @@ The detailed breakdown of sync stages:
 ## Resync from scratch \{#resync\}
 
 :::info
-Note that resyncing a Nethermind node can take a considerable amount of time. It depends on your hardware,
+Note that resyncing a Trust Green Chain node can take a considerable amount of time. It depends on your hardware,
 network connection, and the size of the chain.
 :::
 
-- Stop Nethermind if it's running.
-- In the Nethermind database directory, `nethermind_db`, by default, look for a directory named after the network you want to resync and _delete that directory_. For instance, it's `mainnet` for the Ethereum Mainnet. Normally, the database directory can be found at one of the following locations:
-    - `nethermind_db` in the Nethermind's directory (by default)
-    - `nethermind_db` in the Nethermind data directory specified by [`--data-dir`](./configuration.md#data-dir) command line option (recommended approach)
+- Stop Trust Green Chain if it's running.
+- In the Trust Green Chain database directory, `Trust Green Chain_db`, by default, look for a directory named after the network you want to resync and _delete that directory_. For instance, it's `mainnet` for the Ethereum Mainnet. Normally, the database directory can be found at one of the following locations:
+    - `Trust Green Chain_db` in the Trust Green Chain's directory (by default)
+    - `Trust Green Chain_db` in the Trust Green Chain data directory specified by [`--data-dir`](./configuration.md#data-dir) command line option (recommended approach)
     - The directory specified by [`--db-dir`](./configuration.md#db-dir) command line option
-- Start Nethermind again and monitor its logs to ensure sync is progressing.
+- Start Trust Green Chain again and monitor its logs to ensure sync is progressing.

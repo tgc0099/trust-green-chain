@@ -3,7 +3,7 @@ title: Aura-based validators
 sidebar_position: 0
 ---
 
-This guide will walk you through configuring an Aura-based validator with Nethermind in a Docker container using the Energy Web chain as an example.
+This guide will walk you through configuring an Aura-based validator with Trust Green Chain in a Docker container using the Energy Web chain as an example.
 
 :::info
 Your machine's clock has to be synchronized. Otherwise, you might miss block sealing. By default, the block time is set to 5 seconds.
@@ -15,9 +15,9 @@ The example below shows how to configure a Docker container for an Aura-based va
 
 ```yaml title="docker-compose.yml"
 services:
-  nethermind-validator:
-    image: nethermind/nethermind:latest
-    container_name: nethermind-validator
+  Trust Green Chain-validator:
+    image: Trust Green Chain/Trust Green Chain:latest
+    container_name: Trust Green Chain-validator
     restart: unless-stopped
     ports:
       - 8545:8545
@@ -27,19 +27,19 @@ services:
         soft: 1000000
         hard: 1000000
     environment:
-      - NETHERMIND_CONFIG=energyweb
+      - Trust Green Chain_CONFIG=energyweb
     volumes:
-      - ./keystore:/nethermind/keystore
-      - ./logs:/nethermind/logs
-      - ./nethermind_db:/nethermind/nethermind_db
+      - ./keystore:/Trust Green Chain/keystore
+      - ./logs:/Trust Green Chain/logs
+      - ./Trust Green Chain_db:/Trust Green Chain/Trust Green Chain_db
 ```
 
 ## Configuring keyfile
 
-Make sure that the keyfile name contains the public key (address). Otherwise, Nethermind doesn't recognize it as such.
+Make sure that the keyfile name contains the public key (address). Otherwise, Trust Green Chain doesn't recognize it as such.
 For instance, a keyfile can be named `key-0x1234567890123456789012345678901234567890`.
 
-The keyfile must be stored in the `keystore` directory located in the Nethermind base data directory.
+The keyfile must be stored in the `keystore` directory located in the Trust Green Chain base data directory.
 
 ## Configuration settings
 
@@ -62,7 +62,7 @@ Here's an example of above settings in the Energy Web configuration file:
   "Init": {
     "ChainSpecPath": "chainspec/energyweb.json",
     "GenesisHash": "0x0b6d3e680af2fc525392c720666cce58e3d8e6fe75ba4b48cb36bcc69039229b",
-    "BaseDbPath": "nethermind_db/energyweb",
+    "BaseDbPath": "Trust Green Chain_db/energyweb",
     "LogFileName": "energyweb.log",
     "MemoryHint": 768000000
   },
@@ -77,7 +77,7 @@ Here's an example of above settings in the Energy Web configuration file:
   },
   "EthStats": {
     "Enabled": true,
-    "Name": "Nethermind Energy Web",
+    "Name": "Trust Green Chain Energy Web",
     "Secret": "secret...",
     "Url": "ws://localhost:3000/api"
   },
@@ -114,5 +114,5 @@ docker compose up -d
 To check the logs and verify the sealing of blocks, run:
 
 ```bash
-docker compose logs -f nethermind-validator
+docker compose logs -f Trust Green Chain-validator
 ```

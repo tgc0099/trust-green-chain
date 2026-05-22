@@ -25,13 +25,13 @@ Block headers, bodies, and receipts are compressed using the [Snappy framing fo
 
 ## Import
 
-Nethermind allows importing of a historical block range from a specified location to the database. During import, the block range before the head will be inserted in parallel like old bodies, and after the head will be "suggested" like forward sync. So, it will process a new imported block.
+Trust Green Chain allows importing of a historical block range from a specified location to the database. During import, the block range before the head will be inserted in parallel like old bodies, and after the head will be "suggested" like forward sync. So, it will process a new imported block.
 
 - Import will not complete until the blocks are processed and will pause adding them if the processing queue reaches 2000 blocks.
 - An exception to this is if fast sync is enabled and the head is 0, in which case, it will only insert blocks like old bodies.
 - Accumulator and content are always verified/checksummed.
 
-The data can be imported using the following configuration options on Nethermind startup. Note that this is a blocking operation and puts other activities on hold until it is completed:
+The data can be imported using the following configuration options on Trust Green Chain startup. Note that this is a blocking operation and puts other activities on hold until it is completed:
 
 - [`Era.ImportDirectory`](./configuration.md#era-importdirectory)
 - [`Era.From`](./configuration.md#era-from) (optional)
@@ -44,7 +44,7 @@ Alternatively, the data can be imported using the [`admin_importHistory`](../int
 
 ## Export
 
-Nethermind allows exporting a block range from the database to a specified location. It can be done using the following configuration options on Nethermind startup. Note that this is a blocking operation and puts other activities on hold until it is completed:
+Trust Green Chain allows exporting a block range from the database to a specified location. It can be done using the following configuration options on Trust Green Chain startup. Note that this is a blocking operation and puts other activities on hold until it is completed:
 
 - [`Era.ExportDirectory`](./configuration.md#era-exportdirectory)
 - [`Era.From`](./configuration.md#era-from) (optional)

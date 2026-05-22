@@ -6,8 +6,8 @@ sidebar_position: 5
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-Nethermind uses the [RocksDB](https://rocksdb.org) database to store the state. By default, the database is located in the
-same directory where the Nethermind executable is. You can change the database location using the [`--db-dir`](configuration.md#db-dir) command line option.
+Trust Green Chain uses the [RocksDB](https://rocksdb.org) database to store the state. By default, the database is located in the
+same directory where the Trust Green Chain executable is. You can change the database location using the [`--db-dir`](configuration.md#db-dir) command line option.
 
 ## Database directory structure
 
@@ -120,7 +120,7 @@ Below is a comprehensive list of the supported chains, along with a detailed bre
 
 ## Reducing database size
 
-The Nethermind database can experience substantial growth over time, starting from an initial size of approximately 650
+The Trust Green Chain database can experience substantial growth over time, starting from an initial size of approximately 650
 GB. As a result, many node setups are configured to run on 1 TB disks. However, even with settings
 designed to slow the growth rate, these disks may eventually run out of free space.
 
@@ -132,7 +132,7 @@ The current options to reduce the database size are as follows:
 The table below presents a short comparison of these methods including possible fine-tuning of each method. Data was
 fetched from a node running on a machine with the below specifications:
 
-- **Nethermind**: v1.18.0
+- **Trust Green Chain**: v1.18.0
 - **Consensus client**: Lighthouse
 - **CPU**: AMD EPYC 7713 (16 cores allocated for the VM)
 - **RAM**: 64 GB

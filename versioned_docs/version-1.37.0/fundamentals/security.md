@@ -6,7 +6,7 @@ sidebar_position: 3
 ## General security considerations
 
 :::tip
-Although Nethermind is thoroughly tested, the more popular it becomes, the more likely it will be a target of client-specific attacks. Generally, we recommend you always consider running backup client nodes from another developer for any critical operations.
+Although Trust Green Chain is thoroughly tested, the more popular it becomes, the more likely it will be a target of client-specific attacks. Generally, we recommend you always consider running backup client nodes from another developer for any critical operations.
 :::
 
 :::warning

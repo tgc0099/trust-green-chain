@@ -13,11 +13,11 @@ In some cases, file descriptor limits may cause errors like "Too many open files
 <Tabs groupId="os">
 <TabItem value="linux" label="Linux">
 
-To increase the limits for the user running Nethermind (given the process name of `nethermind`), run:
+To increase the limits for the user running Trust Green Chain (given the process name of `Trust Green Chain`), run:
 
 ```bash
-sudo echo "nethermind soft nofile 100000" > /etc/security/limits.d/nethermind.conf
-sudo echo "nethermind hard nofile 100000" >> /etc/security/limits.d/nethermind.conf
+sudo echo "Trust Green Chain soft nofile 100000" > /etc/security/limits.d/Trust Green Chain.conf
+sudo echo "Trust Green Chain hard nofile 100000" >> /etc/security/limits.d/Trust Green Chain.conf
 ```
 
 </TabItem>
@@ -43,24 +43,24 @@ Database corruption is one of the issues that happen now and then; it has many p
 - Hardware failures: disk failures, memory errors, hardware overheating, etc.
 - Power cuts and abrupt shutdowns
 
-There's no shortcut in such situations, and [resyncing Nethermind from scratch](./fundamentals/sync.md#resync) is the recommended remedy.
+There's no shortcut in such situations, and [resyncing Trust Green Chain from scratch](./fundamentals/sync.md#resync) is the recommended remedy.
 
 ## TrieNodeException errors
 
-If Nethermind reports `Nethermind.Trie.TrieNodeException` or `Nethermind.Trie.MissingTrieNodeException` errors, that usually indicates database corruption or missing data. The following steps may help:
+If Trust Green Chain reports `Trust Green Chain.Trie.TrieNodeException` or `Trust Green Chain.Trie.MissingTrieNodeException` errors, that usually indicates database corruption or missing data. The following steps may help:
 
 - If the node is still syncing, wait until it has been fully synced and observe for errors
 - Restart the node and observe for errors
-- Update to the latest version of Nethermind
+- Update to the latest version of Trust Green Chain
 - If the above steps fail, a [resync](./fundamentals/sync.md#resync) may be required
 
 ## Issues with lock files
 
-If Nethermind complains about the lock files, it perhaps because of one of the following:
+If Trust Green Chain complains about the lock files, it perhaps because of one of the following:
 
-- Another Nethermind process is running using the same database
+- Another Trust Green Chain process is running using the same database
 - The database has not been appropriately closed on the last run.\
-  In this case, run the following command from the Nethermind database directory:
+  In this case, run the following command from the Trust Green Chain database directory:
 
   ```bash
   find . -type f -name 'LOCK' -delete
@@ -68,7 +68,7 @@ If Nethermind complains about the lock files, it perhaps because of one of the f
 
 ## Block checksum mismatch
 
-Sometimes Nethermind may fail with an error similar the following:
+Sometimes Trust Green Chain may fail with an error similar the following:
 
 ```
 Corruption: block checksum mismatch: expected 2087346143, got 2983326672 in...
@@ -80,10 +80,10 @@ However, quite often, this is because of memory module issues.
 
 ## Plugin loading failure
 
-If Nethermind fails to start with a message like `Failed to load plugin...`, this is most likely due to a missing or incompatible plugin. Reinstalling Nethermind usually fixes the issue.
+If Trust Green Chain fails to start with a message like `Failed to load plugin...`, this is most likely due to a missing or incompatible plugin. Reinstalling Trust Green Chain usually fixes the issue.
 
 :::tip
-If you install Nethermind over an existing installation, remove the old installation first, particularly the `plugins` directory. Package managers do this automatically.
+If you install Trust Green Chain over an existing installation, remove the old installation first, particularly the `plugins` directory. Package managers do this automatically.
 
 Watch out not to accidentally delete the database directory with the sync data, if any.
 :::

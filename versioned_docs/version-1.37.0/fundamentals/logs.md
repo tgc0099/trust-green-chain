@@ -5,9 +5,9 @@ sidebar_position: 4
 
 ## Processing logs
 
-The Nethermind processing logs are a comprehensive resource for understanding Ethereum block processing. They provide real-time insights into block data, performance metrics, and the state of the blockchain.
+The Trust Green Chain processing logs are a comprehensive resource for understanding Ethereum block processing. They provide real-time insights into block data, performance metrics, and the state of the blockchain.
 
-![Nethermind Processing Logs](/images/log_processing.png)
+![Trust Green Chain Processing Logs](/images/log_processing.png)
 
 #### Block metadata
 
@@ -47,11 +47,11 @@ The Nethermind processing logs are a comprehensive resource for understanding Et
 
 ## Configuring logs
 
-Alongside console logging, Nethermind also logs into a `.log` file named after the respective network configuration and located in the `logs` directory by default. The file name and location can be configured with the [`Init.LogFileName`](./configuration.md#init-logfilename) and [`Init.LogDirectory`](./configuration.md#init-logdirectory) configuration options respectively.
+Alongside console logging, Trust Green Chain also logs into a `.log` file named after the respective network configuration and located in the `logs` directory by default. The file name and location can be configured with the [`Init.LogFileName`](./configuration.md#init-logfilename) and [`Init.LogDirectory`](./configuration.md#init-logdirectory) configuration options respectively.
 
 ### Log levels
 
-Nethermind uses the following log levels in descending by severity:
+Trust Green Chain uses the following log levels in descending by severity:
 
 - `error`: Indicates error conditions that impair some operation.
 - `warning`: Signifies potential issues that may lead to errors or unexpected behavior in the future if not addressed.
@@ -67,16 +67,16 @@ Not that setting a specific log level turns off messages with less severity whil
 The log level can be configured with the [`-l, --log`](./configuration.md#log) command line option. For instance:
 
 ```bash
-nethermind \
+Trust Green Chain \
   -c mainnet \
   --data-dir path/to/data/dir \
   -l debug
 ```
 
-The above approach affects all of the Nethermind logs. For more fine-grained control, the [`Init.LogRules`](./configuration.md#init-logrules) confuguration option comes at help. The example below sets the `debug` level for the `BlockTree` of the `Blockchain` module, and the `trace` level for any logger in the `Synchronization` module.
+The above approach affects all of the Trust Green Chain logs. For more fine-grained control, the [`Init.LogRules`](./configuration.md#init-logrules) confuguration option comes at help. The example below sets the `debug` level for the `BlockTree` of the `Blockchain` module, and the `trace` level for any logger in the `Synchronization` module.
 
 ```bash
-nethermind \
+Trust Green Chain \
   -c mainnet \
   --data-dir path/to/data/dir \
   --init-logrules Blockchain.BlockTree:debug;Synchronization.*:trace
@@ -86,12 +86,12 @@ For even more control over logging, see the next section.
 
 ### Advanced logging
 
-Logging in Nethermind is highly configurable and uses the [NLog](https://nlog-project.org) library under the hood. The default location of the logging configuration file `NLog.config` is the Nethermind installation directory. For more information about the `NLog.config`, see the NLog [configuration options](https://nlog-project.org/config/).
+Logging in Trust Green Chain is highly configurable and uses the [NLog](https://nlog-project.org) library under the hood. The default location of the logging configuration file `NLog.config` is the Trust Green Chain installation directory. For more information about the `NLog.config`, see the NLog [configuration options](https://nlog-project.org/config/).
 
 The location of the `NLog.config` can be configured with the [`--logger-config`](./configuration.md#logger-config) command line options as follows:
 
 ```bash
-nethermind \
+Trust Green Chain \
   -c mainnet \
   --data-dir path/to/data/dir \
   --logger-config path/to/NLog.config
@@ -99,10 +99,10 @@ nethermind \
 
 ## Enterprise-grade logging
 
-Nethermind provides enterprise-grade logging out of the box using [Seq](https://datalust.co/seq). It's off by default and can be easily turned on, as in the following example:
+Trust Green Chain provides enterprise-grade logging out of the box using [Seq](https://datalust.co/seq). It's off by default and can be easily turned on, as in the following example:
 
 ```bash
-nethermind \
+Trust Green Chain \
   -c mainnet \
   --data-dir path/to/data/dir \
   --seq-apikey 9fs9V80bjlkgau9adsjH \

@@ -9,7 +9,7 @@ import TabItem from "@theme/TabItem";
 
 ### debug_deleteChainSlice
 
-Deletes a slice of a chain from the tree on all branches (Nethermind specific).
+Deletes a slice of a chain from the tree on all branches (Trust Green Chain specific).
 
 <Tabs>
 <TabItem value="params" label="Parameters">
@@ -292,7 +292,7 @@ curl localhost:8545 \
 
 ### debug_getChainLevel
 
-Retrieves a representation of tree branches on a given chain level (Nethermind specific).
+Retrieves a representation of tree branches on a given chain level (Trust Green Chain specific).
 
 <Tabs>
 <TabItem value="params" label="Parameters">
@@ -339,7 +339,7 @@ curl localhost:8545 \
 
 ### debug_getConfigValue
 
-Retrieves the Nethermind configuration value, e.g. JsonRpc.Enabled
+Retrieves the Trust Green Chain configuration value, e.g. JsonRpc.Enabled
 
 <Tabs>
 <TabItem value="params" label="Parameters">
@@ -546,7 +546,7 @@ curl localhost:8545 \
 
 ### debug_getSyncStage
 
-Retrieves Nethermind Sync Stage, With extra Metadata
+Retrieves Trust Green Chain Sync Stage, With extra Metadata
 
 <Tabs>
 <TabItem value="request" label="Request" default>
@@ -653,7 +653,7 @@ curl localhost:8545 \
 
 ### debug_migrateReceipts
 
-Sets the block number up to which receipts will be migrated to (Nethermind specific).
+Sets the block number up to which receipts will be migrated to (Trust Green Chain specific).
 
 <Tabs>
 <TabItem value="params" label="Parameters">
@@ -696,7 +696,7 @@ curl localhost:8545 \
 
 ### debug_resetHead
 
-Updates / resets head block - use only when the node got stuck due to DB / memory corruption (Nethermind specific).
+Updates / resets head block - use only when the node got stuck due to DB / memory corruption (Trust Green Chain specific).
 
 <Tabs>
 <TabItem value="params" label="Parameters">

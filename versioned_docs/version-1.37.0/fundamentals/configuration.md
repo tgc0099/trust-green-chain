@@ -6,7 +6,7 @@ sidebar_position: 1
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-Nethermind is highly configurable. There are 3 ways of configuring it, listed by priority:
+Trust Green Chain is highly configurable. There are 3 ways of configuring it, listed by priority:
 
 - [Command line options](#basic-command-line-options) (aka arguments or flags)
 - [Environment variables](#environment-variables)
@@ -19,7 +19,7 @@ Given the above priority list, an option defined in a more priority way override
 The full list of configuration options can be displayed by running:
 
 ```bash
-nethermind -h
+Trust Green Chain -h
 ```
 
 Below is the list of the basic command line options followed by an exhaustive list of configuration options by namespace.
@@ -37,7 +37,7 @@ The configuration options are case-sensitive and can be defined only once unless
   <details>
   <summary>Available configurations</summary>
 
-  Nethermind provides the following pre-built configurations named as the networks they are for. Their respective versions for archive nodes are suffixed `_archive`.
+  Trust Green Chain provides the following pre-built configurations named as the networks they are for. Their respective versions for archive nodes are suffixed `_archive`.
 
   - `base-mainnet` `base-mainnet_archive`
   - `base-sepolia` `base-sepolia_archive`
@@ -59,7 +59,7 @@ The configuration options are case-sensitive and can be defined only once unless
 
   </details>
 
-  Alternatively, the configuration file can also be set by the `NETHERMIND_CONFIG` environment variable.
+  Alternatively, the configuration file can also be set by the `Trust Green Chain_CONFIG` environment variable.
 
 - #### `--configs-dir <path>` \{#configs-dir\}
 
@@ -82,7 +82,7 @@ The configuration options are case-sensitive and can be defined only once unless
 
 - #### `--data-dir <path>` \{#data-dir\}
 
-  The path to the Nethermind data directory. Defaults to Nethermind's current directory.\
+  The path to the Trust Green Chain data directory. Defaults to Trust Green Chain's current directory.\
   Deprecates `--datadir` `-dd`.
 
   :::warning
@@ -91,7 +91,7 @@ The configuration options are case-sensitive and can be defined only once unless
 
 - #### `--db-dir <path>` \{#db-dir\}
 
-  The path to the Nethermind database directory. Defaults to `db`.\
+  The path to the Trust Green Chain database directory. Defaults to `db`.\
   Deprecates `--baseDbPath` `-d`.
 
 - #### `-?, -h, --help` \{#help\}
@@ -109,12 +109,12 @@ The configuration options are case-sensitive and can be defined only once unless
 
 - #### `--plugins-dir <path>` \{#plugins-dir\}
 
-  The path to the Nethermind plugins directory. Defaults to `plugins`.\
+  The path to the Trust Green Chain plugins directory. Defaults to `plugins`.\
   Deprecates `--pluginsDirectory` `-pd`.
 
 - #### `--version` \{#version\}
 
-  Shows the Nethermind version information.
+  Shows the Trust Green Chain version information.
 
 ## Options by namespaces
 
@@ -133,7 +133,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_AURACONFIG_ALLOWAURAPRIVATECHAINS=true|false
+  Trust Green Chain_AURACONFIG_ALLOWAURAPRIVATECHAINS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -160,7 +160,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_AURACONFIG_FORCESEALING=true|false
+  Trust Green Chain_AURACONFIG_FORCESEALING=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -187,7 +187,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_AURACONFIG_MINIMUM2MLNGASPERBLOCKWHENUSINGBLOCKGASLIMITCONTRACT=true|false
+  Trust Green Chain_AURACONFIG_MINIMUM2MLNGASPERBLOCKWHENUSINGBLOCKGASLIMITCONTRACT=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -214,7 +214,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_AURACONFIG_TXPRIORITYCONFIGFILEPATH=<value>
+  Trust Green Chain_AURACONFIG_TXPRIORITYCONFIGFILEPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -241,7 +241,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_AURACONFIG_TXPRIORITYCONTRACTADDRESS=<value>
+  Trust Green Chain_AURACONFIG_TXPRIORITYCONTRACTADDRESS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -271,7 +271,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_BLOCKPRODUCTIONBLOBLIMIT=<value>
+  Trust Green Chain_BLOCKSCONFIG_BLOCKPRODUCTIONBLOBLIMIT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -298,7 +298,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_BLOCKPRODUCTIONMAXTXKILOBYTES=<value>
+  Trust Green Chain_BLOCKSCONFIG_BLOCKPRODUCTIONMAXTXKILOBYTES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -325,7 +325,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_BLOCKPRODUCTIONTIMEOUTMS=<value>
+  Trust Green Chain_BLOCKSCONFIG_BLOCKPRODUCTIONTIMEOUTMS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -352,7 +352,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_EXTRADATA=<value>
+  Trust Green Chain_BLOCKSCONFIG_EXTRADATA=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -366,7 +366,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The block header extra data up to 32 bytes in length. Defaults to `Nethermind`.
+  The block header extra data up to 32 bytes in length. Defaults to `Trust Green Chain`.
 
 - #### `Blocks.GenesisTimeoutMs` \{#blocks-genesistimeoutms\}
 
@@ -379,7 +379,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_GENESISTIMEOUTMS=<value>
+  Trust Green Chain_BLOCKSCONFIG_GENESISTIMEOUTMS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -406,7 +406,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_MINGASPRICE=<value>
+  Trust Green Chain_BLOCKSCONFIG_MINGASPRICE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -433,7 +433,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_PREWARMSTATEONBLOCKPROCESSING=true|false
+  Trust Green Chain_BLOCKSCONFIG_PREWARMSTATEONBLOCKPROCESSING=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -460,7 +460,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_RANDOMIZEDBLOCKS=true|false
+  Trust Green Chain_BLOCKSCONFIG_RANDOMIZEDBLOCKS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -487,7 +487,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_SECONDSPERSLOT=<value>
+  Trust Green Chain_BLOCKSCONFIG_SECONDSPERSLOT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -514,7 +514,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOCKSCONFIG_TARGETBLOCKGASLIMIT=<value>
+  Trust Green Chain_BLOCKSCONFIG_TARGETBLOCKGASLIMIT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -544,7 +544,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOOMCONFIG_INDEX=true|false
+  Trust Green Chain_BLOOMCONFIG_INDEX=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -571,7 +571,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOOMCONFIG_INDEXLEVELBUCKETSIZES=<value>
+  Trust Green Chain_BLOOMCONFIG_INDEXLEVELBUCKETSIZES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -598,7 +598,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOOMCONFIG_MIGRATION=true|false
+  Trust Green Chain_BLOOMCONFIG_MIGRATION=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -625,7 +625,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_BLOOMCONFIG_MIGRATIONSTATISTICS=true|false
+  Trust Green Chain_BLOOMCONFIG_MIGRATIONSTATISTICS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -655,7 +655,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_CENSORSHIPDETECTORCONFIG_ADDRESSESFORCENSORSHIPDETECTION=<value>
+  Trust Green Chain_CENSORSHIPDETECTORCONFIG_ADDRESSESFORCENSORSHIPDETECTION=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -682,7 +682,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_CENSORSHIPDETECTORCONFIG_BLOCKCENSORSHIPTHRESHOLD=<value>
+  Trust Green Chain_CENSORSHIPDETECTORCONFIG_BLOCKCENSORSHIPTHRESHOLD=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -709,7 +709,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_CENSORSHIPDETECTORCONFIG_ENABLED=true|false
+  Trust Green Chain_CENSORSHIPDETECTORCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -742,7 +742,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ERACONFIG_EXPORTDIRECTORY=<value>
+  Trust Green Chain_ERACONFIG_EXPORTDIRECTORY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -769,7 +769,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ERACONFIG_FROM=<value>
+  Trust Green Chain_ERACONFIG_FROM=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -796,7 +796,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ERACONFIG_IMPORTDIRECTORY=<value>
+  Trust Green Chain_ERACONFIG_IMPORTDIRECTORY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -823,7 +823,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ERACONFIG_TO=<value>
+  Trust Green Chain_ERACONFIG_TO=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -850,7 +850,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ERACONFIG_TRUSTEDACCUMULATORFILE=<value>
+  Trust Green Chain_ERACONFIG_TRUSTEDACCUMULATORFILE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -880,7 +880,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ETHSTATSCONFIG_CONTACT=<value>
+  Trust Green Chain_ETHSTATSCONFIG_CONTACT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -894,7 +894,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The node owner contact details displayed on Ethstats. Defaults to `hello@nethermind.io`.
+  The node owner contact details displayed on Ethstats. Defaults to `hello@Trust Green Chain.io`.
 
 - #### `EthStats.Enabled` \{#ethstats-enabled\}
 
@@ -907,7 +907,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ETHSTATSCONFIG_ENABLED=true|false
+  Trust Green Chain_ETHSTATSCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -934,7 +934,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ETHSTATSCONFIG_NAME=<value>
+  Trust Green Chain_ETHSTATSCONFIG_NAME=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -948,7 +948,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The node name displayed on Ethstats. Defaults to `Nethermind`.
+  The node name displayed on Ethstats. Defaults to `Trust Green Chain`.
 
 - #### `EthStats.Secret` \{#ethstats-secret\}
 
@@ -961,7 +961,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ETHSTATSCONFIG_SECRET=<value>
+  Trust Green Chain_ETHSTATSCONFIG_SECRET=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -988,7 +988,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ETHSTATSCONFIG_SENDINTERVAL=<value>
+  Trust Green Chain_ETHSTATSCONFIG_SENDINTERVAL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1015,7 +1015,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_ETHSTATSCONFIG_SERVER=<value>
+  Trust Green Chain_ETHSTATSCONFIG_SERVER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1045,7 +1045,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLASHBOTSCONFIG_ENABLEPREWARMER=true|false
+  Trust Green Chain_FLASHBOTSCONFIG_ENABLEPREWARMER=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1072,7 +1072,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLASHBOTSCONFIG_ENABLEVALIDATION=true|false
+  Trust Green Chain_FLASHBOTSCONFIG_ENABLEVALIDATION=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1099,7 +1099,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLASHBOTSCONFIG_ENABLED=true|false
+  Trust Green Chain_FLASHBOTSCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1126,7 +1126,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLASHBOTSCONFIG_EXCLUDEWITHDRAWALS=true|false
+  Trust Green Chain_FLASHBOTSCONFIG_EXCLUDEWITHDRAWALS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1153,7 +1153,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLASHBOTSCONFIG_FLASHBOTSMODULECONCURRENTINSTANCES=<value>
+  Trust Green Chain_FLASHBOTSCONFIG_FLASHBOTSMODULECONCURRENTINSTANCES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1181,7 +1181,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLASHBOTSCONFIG_USEBALANCEDIFFPROFIT=true|false
+  Trust Green Chain_FLASHBOTSCONFIG_USEBALANCEDIFFPROFIT=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1211,7 +1211,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_BLOCKCACHESIZEBUDGET=<value>
+  Trust Green Chain_FLATDBCONFIG_BLOCKCACHESIZEBUDGET=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1238,7 +1238,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_COMPACTSIZE=<value>
+  Trust Green Chain_FLATDBCONFIG_COMPACTSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1265,7 +1265,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_ENABLEPREIMAGERECORDING=true|false
+  Trust Green Chain_FLATDBCONFIG_ENABLEPREIMAGERECORDING=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1292,7 +1292,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_ENABLED=true|false
+  Trust Green Chain_FLATDBCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1319,7 +1319,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_IMPORTFROMPRUNINGTRIESTATE=true|false
+  Trust Green Chain_FLATDBCONFIG_IMPORTFROMPRUNINGTRIESTATE=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1346,7 +1346,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_INLINECOMPACTION=true|false
+  Trust Green Chain_FLATDBCONFIG_INLINECOMPACTION=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1373,7 +1373,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_LAYOUT=<value>
+  Trust Green Chain_FLATDBCONFIG_LAYOUT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1408,7 +1408,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_MAXINFLIGHTCOMPACTJOB=<value>
+  Trust Green Chain_FLATDBCONFIG_MAXINFLIGHTCOMPACTJOB=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1435,7 +1435,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_MAXREORGDEPTH=<value>
+  Trust Green Chain_FLATDBCONFIG_MAXREORGDEPTH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1462,7 +1462,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_MINCOMPACTSIZE=<value>
+  Trust Green Chain_FLATDBCONFIG_MINCOMPACTSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1489,7 +1489,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_MINREORGDEPTH=<value>
+  Trust Green Chain_FLATDBCONFIG_MINREORGDEPTH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1516,7 +1516,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_TRIECACHEMEMORYBUDGET=<value>
+  Trust Green Chain_FLATDBCONFIG_TRIECACHEMEMORYBUDGET=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1543,7 +1543,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_TRIEWARMERWORKERCOUNT=<value>
+  Trust Green Chain_FLATDBCONFIG_TRIEWARMERWORKERCOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1570,7 +1570,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_FLATDBCONFIG_VERIFYWITHTRIE=true|false
+  Trust Green Chain_FLATDBCONFIG_VERIFYWITHTRIE=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1600,7 +1600,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_ENABLED=true|false
+  Trust Green Chain_HEALTHCHECKSCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1627,7 +1627,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_LOWSTORAGECHECKAWAITONSTARTUP=true|false
+  Trust Green Chain_HEALTHCHECKSCONFIG_LOWSTORAGECHECKAWAITONSTARTUP=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1654,7 +1654,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_LOWSTORAGESPACESHUTDOWNTHRESHOLD=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_LOWSTORAGESPACESHUTDOWNTHRESHOLD=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1668,7 +1668,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The percentage of available disk space below which Nethermind shuts down. `0` to disable. Defaults to `1`.
+  The percentage of available disk space below which Trust Green Chain shuts down. `0` to disable. Defaults to `1`.
 
 - #### `HealthChecks.LowStorageSpaceWarningThreshold` \{#healthchecks-lowstoragespacewarningthreshold\}
 
@@ -1681,7 +1681,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_LOWSTORAGESPACEWARNINGTHRESHOLD=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_LOWSTORAGESPACEWARNINGTHRESHOLD=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1708,7 +1708,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_MAXINTERVALCLREQUESTTIME=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_MAXINTERVALCLREQUESTTIME=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1735,7 +1735,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_MAXINTERVALWITHOUTPROCESSEDBLOCK=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_MAXINTERVALWITHOUTPROCESSEDBLOCK=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1762,7 +1762,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_MAXINTERVALWITHOUTPRODUCEDBLOCK=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_MAXINTERVALWITHOUTPRODUCEDBLOCK=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1789,7 +1789,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_POLLINGINTERVAL=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_POLLINGINTERVAL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1816,7 +1816,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_SLUG=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_SLUG=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1843,7 +1843,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_UIENABLED=true|false
+  Trust Green Chain_HEALTHCHECKSCONFIG_UIENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1870,7 +1870,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_WEBHOOKSENABLED=true|false
+  Trust Green Chain_HEALTHCHECKSCONFIG_WEBHOOKSENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1897,7 +1897,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_WEBHOOKSPAYLOAD=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_WEBHOOKSPAYLOAD=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -1949,7 +1949,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_WEBHOOKSRESTOREPAYLOAD=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_WEBHOOKSRESTOREPAYLOAD=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2001,7 +2001,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HEALTHCHECKSCONFIG_WEBHOOKSURI=<value>
+  Trust Green Chain_HEALTHCHECKSCONFIG_WEBHOOKSURI=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2031,7 +2031,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HISTORYCONFIG_PRUNING=<value>
+  Trust Green Chain_HISTORYCONFIG_PRUNING=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2066,7 +2066,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HISTORYCONFIG_PRUNINGINTERVAL=<value>
+  Trust Green Chain_HISTORYCONFIG_PRUNINGINTERVAL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2093,7 +2093,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HISTORYCONFIG_RETENTIONEPOCHS=<value>
+  Trust Green Chain_HISTORYCONFIG_RETENTIONEPOCHS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2123,7 +2123,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HIVECONFIG_BLOCKSDIR=<value>
+  Trust Green Chain_HIVECONFIG_BLOCKSDIR=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2150,7 +2150,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HIVECONFIG_CHAINFILE=<value>
+  Trust Green Chain_HIVECONFIG_CHAINFILE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2177,7 +2177,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HIVECONFIG_ENABLED=true|false
+  Trust Green Chain_HIVECONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2204,7 +2204,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HIVECONFIG_GENESISFILEPATH=<value>
+  Trust Green Chain_HIVECONFIG_GENESISFILEPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2231,7 +2231,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_HIVECONFIG_KEYSDIR=<value>
+  Trust Green Chain_HIVECONFIG_KEYSDIR=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2261,7 +2261,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_AUTODUMP=<value>
+  Trust Green Chain_INITCONFIG_AUTODUMP=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2301,7 +2301,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_BADBLOCKSSTORED=<value>
+  Trust Green Chain_INITCONFIG_BADBLOCKSSTORED=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2328,7 +2328,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_BASEDBPATH=<value>
+  Trust Green Chain_INITCONFIG_BASEDBPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2342,7 +2342,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The base path for all Nethermind databases. Defaults to `db`.
+  The base path for all Trust Green Chain databases. Defaults to `db`.
 
 - #### `Init.ChainSpecPath` \{#init-chainspecpath\}
 
@@ -2355,7 +2355,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_CHAINSPECPATH=<value>
+  Trust Green Chain_INITCONFIG_CHAINSPECPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2382,7 +2382,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_DIAGNOSTICMODE=<value>
+  Trust Green Chain_INITCONFIG_DIAGNOSTICMODE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2421,7 +2421,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_DISCOVERYENABLED=true|false
+  Trust Green Chain_INITCONFIG_DISCOVERYENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2435,7 +2435,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  Whether to enable the node discovery. If disabled, Nethermind doesn't look for other nodes beyond the bootnodes specified. Allowed values: `true` `false`. Defaults to `true`.
+  Whether to enable the node discovery. If disabled, Trust Green Chain doesn't look for other nodes beyond the bootnodes specified. Allowed values: `true` `false`. Defaults to `true`.
 
 - #### `Init.EnableUnsecuredDevWallet` \{#init-enableunsecureddevwallet\}
 
@@ -2448,7 +2448,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_ENABLEUNSECUREDDEVWALLET=true|false
+  Trust Green Chain_INITCONFIG_ENABLEUNSECUREDDEVWALLET=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2475,7 +2475,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_GENESISHASH=<value>
+  Trust Green Chain_INITCONFIG_GENESISHASH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2502,7 +2502,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_KEEPDEVWALLETINMEMORY=true|false
+  Trust Green Chain_INITCONFIG_KEEPDEVWALLETINMEMORY=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2529,7 +2529,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_KZGSETUPPATH=<value>
+  Trust Green Chain_INITCONFIG_KZGSETUPPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2556,7 +2556,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_LOGDIRECTORY=<value>
+  Trust Green Chain_INITCONFIG_LOGDIRECTORY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2570,7 +2570,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The path to the Nethermind logs directory. Defaults to `logs`.
+  The path to the Trust Green Chain logs directory. Defaults to `logs`.
 
 - #### `Init.LogFileName` \{#init-logfilename\}
 
@@ -2583,7 +2583,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_LOGFILENAME=<value>
+  Trust Green Chain_INITCONFIG_LOGFILENAME=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2610,7 +2610,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_LOGRULES=<value>
+  Trust Green Chain_INITCONFIG_LOGRULES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2637,7 +2637,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_MEMORYHINT=<value>
+  Trust Green Chain_INITCONFIG_MEMORYHINT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2664,7 +2664,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_PEERMANAGERENABLED=true|false
+  Trust Green Chain_INITCONFIG_PEERMANAGERENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2691,7 +2691,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_PROCESSINGENABLED=true|false
+  Trust Green Chain_INITCONFIG_PROCESSINGENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2718,7 +2718,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_RPCDBURL=<value>
+  Trust Green Chain_INITCONFIG_RPCDBURL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2745,7 +2745,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_STATICNODESPATH=<value>
+  Trust Green Chain_INITCONFIG_STATICNODESPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2772,7 +2772,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_TRUSTEDNODESPATH=<value>
+  Trust Green Chain_INITCONFIG_TRUSTEDNODESPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2799,7 +2799,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_INITCONFIG_WEBSOCKETSENABLED=true|false
+  Trust Green Chain_INITCONFIG_WEBSOCKETSENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2829,7 +2829,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_ADDITIONALRPCURLS=<value>
+  Trust Green Chain_JSONRPCCONFIG_ADDITIONALRPCURLS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2856,7 +2856,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_BUFFERRESPONSES=true|false
+  Trust Green Chain_JSONRPCCONFIG_BUFFERRESPONSES=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2883,7 +2883,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_CALLSFILTERFILEPATH=<value>
+  Trust Green Chain_JSONRPCCONFIG_CALLSFILTERFILEPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2910,7 +2910,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_CORSORIGINS=<value>
+  Trust Green Chain_JSONRPCCONFIG_CORSORIGINS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2937,7 +2937,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_ENABLEPERMETHODMETRICS=true|false
+  Trust Green Chain_JSONRPCCONFIG_ENABLEPERMETHODMETRICS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2964,7 +2964,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_ENABLED=true|false
+  Trust Green Chain_JSONRPCCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -2991,7 +2991,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_ENABLEDMODULES=<value>
+  Trust Green Chain_JSONRPCCONFIG_ENABLEDMODULES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3039,7 +3039,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_ENGINEENABLEDMODULES=<value>
+  Trust Green Chain_JSONRPCCONFIG_ENGINEENABLEDMODULES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3066,7 +3066,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_ENGINEHOST=<value>
+  Trust Green Chain_JSONRPCCONFIG_ENGINEHOST=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3093,7 +3093,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_ENGINEPORT=<value>
+  Trust Green Chain_JSONRPCCONFIG_ENGINEPORT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3120,7 +3120,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_ESTIMATEERRORMARGIN=<value>
+  Trust Green Chain_JSONRPCCONFIG_ESTIMATEERRORMARGIN=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3147,7 +3147,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_ETHMODULECONCURRENTINSTANCES=<value>
+  Trust Green Chain_JSONRPCCONFIG_ETHMODULECONCURRENTINSTANCES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3184,7 +3184,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_FILTERSTIMEOUT=<value>
+  Trust Green Chain_JSONRPCCONFIG_FILTERSTIMEOUT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3211,7 +3211,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_GASCAP=<value>
+  Trust Green Chain_JSONRPCCONFIG_GASCAP=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3238,7 +3238,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_HOST=<value>
+  Trust Green Chain_JSONRPCCONFIG_HOST=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3265,7 +3265,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_IPCPROCESSINGCONCURRENCY=<value>
+  Trust Green Chain_JSONRPCCONFIG_IPCPROCESSINGCONCURRENCY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3292,7 +3292,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_IPCUNIXDOMAINSOCKETPATH=<value>
+  Trust Green Chain_JSONRPCCONFIG_IPCUNIXDOMAINSOCKETPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3319,7 +3319,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_JSONSERIALIZATIONMAXDEPTH=<value>
+  Trust Green Chain_JSONRPCCONFIG_JSONSERIALIZATIONMAXDEPTH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3346,7 +3346,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_JWTSECRETFILE=<value>
+  Trust Green Chain_JSONRPCCONFIG_JWTSECRETFILE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3373,7 +3373,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_MAXBATCHRESPONSEBODYSIZE=<value>
+  Trust Green Chain_JSONRPCCONFIG_MAXBATCHRESPONSEBODYSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3400,7 +3400,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_MAXBATCHSIZE=<value>
+  Trust Green Chain_JSONRPCCONFIG_MAXBATCHSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3427,7 +3427,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_MAXLOGGEDREQUESTPARAMETERSCHARACTERS=<value>
+  Trust Green Chain_JSONRPCCONFIG_MAXLOGGEDREQUESTPARAMETERSCHARACTERS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3454,7 +3454,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_MAXLOGSPERRESPONSE=<value>
+  Trust Green Chain_JSONRPCCONFIG_MAXLOGSPERRESPONSE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3481,7 +3481,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_MAXREQUESTBODYSIZE=<value>
+  Trust Green Chain_JSONRPCCONFIG_MAXREQUESTBODYSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3508,7 +3508,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_MAXSIMULATEBLOCKSCAP=<value>
+  Trust Green Chain_JSONRPCCONFIG_MAXSIMULATEBLOCKSCAP=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3535,7 +3535,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_METHODSLOGGINGFILTERING=<value>
+  Trust Green Chain_JSONRPCCONFIG_METHODSLOGGINGFILTERING=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3562,7 +3562,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_PORT=<value>
+  Trust Green Chain_JSONRPCCONFIG_PORT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3589,7 +3589,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_PRELOADRPCMODULES=true|false
+  Trust Green Chain_JSONRPCCONFIG_PRELOADRPCMODULES=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3616,7 +3616,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_REPORTINTERVALSECONDS=<value>
+  Trust Green Chain_JSONRPCCONFIG_REPORTINTERVALSECONDS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3643,7 +3643,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_REQUESTQUEUELIMIT=<value>
+  Trust Green Chain_JSONRPCCONFIG_REQUESTQUEUELIMIT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3680,7 +3680,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_RPCRECORDERBASEFILEPATH=<value>
+  Trust Green Chain_JSONRPCCONFIG_RPCRECORDERBASEFILEPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3707,7 +3707,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_RPCRECORDERSTATE=<value>
+  Trust Green Chain_JSONRPCCONFIG_RPCRECORDERSTATE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3743,7 +3743,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_STRICTHEXFORMAT=true|false
+  Trust Green Chain_JSONRPCCONFIG_STRICTHEXFORMAT=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3770,7 +3770,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_TIMEOUT=<value>
+  Trust Green Chain_JSONRPCCONFIG_TIMEOUT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3797,7 +3797,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_WEBSOCKETSPORT=<value>
+  Trust Green Chain_JSONRPCCONFIG_WEBSOCKETSPORT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3824,7 +3824,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_JSONRPCCONFIG_WEBSOCKETSPROCESSINGCONCURRENCY=<value>
+  Trust Green Chain_JSONRPCCONFIG_WEBSOCKETSPROCESSINGCONCURRENCY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3854,7 +3854,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_BLOCKAUTHORACCOUNT=<value>
+  Trust Green Chain_KEYSTORECONFIG_BLOCKAUTHORACCOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3881,7 +3881,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_CIPHER=<value>
+  Trust Green Chain_KEYSTORECONFIG_CIPHER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3908,7 +3908,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_ENODEACCOUNT=<value>
+  Trust Green Chain_KEYSTORECONFIG_ENODEACCOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3935,7 +3935,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_ENODEKEYFILE=<value>
+  Trust Green Chain_KEYSTORECONFIG_ENODEKEYFILE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3962,7 +3962,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_IVSIZE=<value>
+  Trust Green Chain_KEYSTORECONFIG_IVSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -3989,7 +3989,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_KDF=<value>
+  Trust Green Chain_KEYSTORECONFIG_KDF=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4016,7 +4016,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_KDFPARAMSDKLEN=<value>
+  Trust Green Chain_KEYSTORECONFIG_KDFPARAMSDKLEN=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4043,7 +4043,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_KDFPARAMSN=<value>
+  Trust Green Chain_KEYSTORECONFIG_KDFPARAMSN=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4070,7 +4070,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_KDFPARAMSP=<value>
+  Trust Green Chain_KEYSTORECONFIG_KDFPARAMSP=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4097,7 +4097,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_KDFPARAMSR=<value>
+  Trust Green Chain_KEYSTORECONFIG_KDFPARAMSR=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4124,7 +4124,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_KDFPARAMSSALTLEN=<value>
+  Trust Green Chain_KEYSTORECONFIG_KDFPARAMSSALTLEN=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4151,7 +4151,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_KEYSTOREDIRECTORY=<value>
+  Trust Green Chain_KEYSTORECONFIG_KEYSTOREDIRECTORY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4178,7 +4178,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_KEYSTOREENCODING=<value>
+  Trust Green Chain_KEYSTORECONFIG_KEYSTOREENCODING=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4205,7 +4205,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_PASSWORDFILES=<value>
+  Trust Green Chain_KEYSTORECONFIG_PASSWORDFILES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4232,7 +4232,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_PASSWORDS=<value>
+  Trust Green Chain_KEYSTORECONFIG_PASSWORDS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4259,7 +4259,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_SYMMETRICENCRYPTERBLOCKSIZE=<value>
+  Trust Green Chain_KEYSTORECONFIG_SYMMETRICENCRYPTERBLOCKSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4286,7 +4286,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_SYMMETRICENCRYPTERKEYSIZE=<value>
+  Trust Green Chain_KEYSTORECONFIG_SYMMETRICENCRYPTERKEYSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4313,7 +4313,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_TESTNODEKEY=<value>
+  Trust Green Chain_KEYSTORECONFIG_TESTNODEKEY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4340,7 +4340,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_KEYSTORECONFIG_UNLOCKACCOUNTS=<value>
+  Trust Green Chain_KEYSTORECONFIG_UNLOCKACCOUNTS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4370,7 +4370,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_LOGINDEXCONFIG_ENABLED=true|false
+  Trust Green Chain_LOGINDEXCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4397,7 +4397,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_LOGINDEXCONFIG_RESET=true|false
+  Trust Green Chain_LOGINDEXCONFIG_RESET=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4427,7 +4427,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_BUILDERRELAYURL=<value>
+  Trust Green Chain_MERGECONFIG_BUILDERRELAYURL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4454,7 +4454,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_COLLECTIONSPERDECOMMIT=<value>
+  Trust Green Chain_MERGECONFIG_COLLECTIONSPERDECOMMIT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4489,7 +4489,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_COMPACTMEMORY=<value>
+  Trust Green Chain_MERGECONFIG_COMPACTMEMORY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4524,7 +4524,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_ENABLED=true|false
+  Trust Green Chain_MERGECONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4551,7 +4551,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_FINALTOTALDIFFICULTY=<value>
+  Trust Green Chain_MERGECONFIG_FINALTOTALDIFFICULTY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4578,7 +4578,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_PRIORITIZEBLOCKLATENCY=true|false
+  Trust Green Chain_MERGECONFIG_PRIORITIZEBLOCKLATENCY=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4605,7 +4605,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_SWEEPMEMORY=<value>
+  Trust Green Chain_MERGECONFIG_SWEEPMEMORY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4641,7 +4641,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_TERMINALBLOCKHASH=<value>
+  Trust Green Chain_MERGECONFIG_TERMINALBLOCKHASH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4668,7 +4668,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_TERMINALBLOCKNUMBER=<value>
+  Trust Green Chain_MERGECONFIG_TERMINALBLOCKNUMBER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4695,7 +4695,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MERGECONFIG_TERMINALTOTALDIFFICULTY=<value>
+  Trust Green Chain_MERGECONFIG_TERMINALTOTALDIFFICULTY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4725,7 +4725,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_COUNTERSENABLED=true|false
+  Trust Green Chain_METRICSCONFIG_COUNTERSENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4752,7 +4752,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_DBMETRICINTERVALSECONDS=<value>
+  Trust Green Chain_METRICSCONFIG_DBMETRICINTERVALSECONDS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4779,7 +4779,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_ENABLEDBSIZEMETRICS=true|false
+  Trust Green Chain_METRICSCONFIG_ENABLEDBSIZEMETRICS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4806,7 +4806,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_ENABLEDETAILEDMETRIC=true|false
+  Trust Green Chain_METRICSCONFIG_ENABLEDETAILEDMETRIC=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4833,7 +4833,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_ENABLED=true|false
+  Trust Green Chain_METRICSCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4860,7 +4860,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_EXPOSEHOST=<value>
+  Trust Green Chain_METRICSCONFIG_EXPOSEHOST=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4887,7 +4887,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_EXPOSEPORT=<value>
+  Trust Green Chain_METRICSCONFIG_EXPOSEPORT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4914,7 +4914,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_INTERVALSECONDS=<value>
+  Trust Green Chain_METRICSCONFIG_INTERVALSECONDS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4941,7 +4941,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_MONITORINGGROUP=<value>
+  Trust Green Chain_METRICSCONFIG_MONITORINGGROUP=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4955,7 +4955,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The Prometheus metrics group name. Defaults to `nethermind`.
+  The Prometheus metrics group name. Defaults to `Trust Green Chain`.
 
 - #### `Metrics.MonitoringJob` \{#metrics-monitoringjob\}
 
@@ -4968,7 +4968,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_MONITORINGJOB=<value>
+  Trust Green Chain_METRICSCONFIG_MONITORINGJOB=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -4982,7 +4982,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The Prometheus metrics job name. Defaults to `nethermind`.
+  The Prometheus metrics job name. Defaults to `Trust Green Chain`.
 
 - #### `Metrics.NodeName` \{#metrics-nodename\}
 
@@ -4995,7 +4995,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_NODENAME=<value>
+  Trust Green Chain_METRICSCONFIG_NODENAME=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5009,7 +5009,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The name to display on the Grafana dashboard. Defaults to `Nethermind`.
+  The name to display on the Grafana dashboard. Defaults to `Trust Green Chain`.
 
 - #### `Metrics.PauseDbMetricDuringBlockProcessing` \{#metrics-pausedbmetricduringblockprocessing\}
 
@@ -5022,7 +5022,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_PAUSEDBMETRICDURINGBLOCKPROCESSING=true|false
+  Trust Green Chain_METRICSCONFIG_PAUSEDBMETRICDURINGBLOCKPROCESSING=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5049,7 +5049,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_METRICSCONFIG_PUSHGATEWAYURL=<value>
+  Trust Green Chain_METRICSCONFIG_PUSHGATEWAYURL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5079,7 +5079,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MININGCONFIG_ENABLED=true|false
+  Trust Green Chain_MININGCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5106,7 +5106,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_MININGCONFIG_SIGNER=<value>
+  Trust Green Chain_MININGCONFIG_SIGNER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5136,7 +5136,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_BOOTNODES=<value>
+  Trust Green Chain_NETWORKCONFIG_BOOTNODES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5163,7 +5163,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_DIAGTRACERENABLED=true|false
+  Trust Green Chain_NETWORKCONFIG_DIAGTRACERENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5190,7 +5190,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_DISCOVERYDNS=<value>
+  Trust Green Chain_NETWORKCONFIG_DISCOVERYDNS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5217,7 +5217,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_DISCOVERYPORT=<value>
+  Trust Green Chain_NETWORKCONFIG_DISCOVERYPORT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5244,7 +5244,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_ENABLEUPNP=true|false
+  Trust Green Chain_NETWORKCONFIG_ENABLEUPNP=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5271,7 +5271,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_EXTERNALIP=<value>
+  Trust Green Chain_NETWORKCONFIG_EXTERNALIP=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5298,7 +5298,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_FILTERDISCOVERYNODESBYRECENTIP=true|false
+  Trust Green Chain_NETWORKCONFIG_FILTERDISCOVERYNODESBYRECENTIP=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5325,7 +5325,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_FILTERDISCOVERYNODESBYSAMESUBNET=true|false
+  Trust Green Chain_NETWORKCONFIG_FILTERDISCOVERYNODESBYSAMESUBNET=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5352,7 +5352,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_FILTERPEERSBYRECENTIP=true|false
+  Trust Green Chain_NETWORKCONFIG_FILTERPEERSBYRECENTIP=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5379,7 +5379,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_FILTERPEERSBYSAMESUBNET=true|false
+  Trust Green Chain_NETWORKCONFIG_FILTERPEERSBYSAMESUBNET=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5406,7 +5406,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_LOCALIP=<value>
+  Trust Green Chain_NETWORKCONFIG_LOCALIP=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5433,7 +5433,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_MAXACTIVEPEERS=<value>
+  Trust Green Chain_NETWORKCONFIG_MAXACTIVEPEERS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5460,7 +5460,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_MAXNETTYARENACOUNT=<value>
+  Trust Green Chain_NETWORKCONFIG_MAXNETTYARENACOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5487,7 +5487,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_NETTYARENAORDER=<value>
+  Trust Green Chain_NETWORKCONFIG_NETTYARENAORDER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5514,7 +5514,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_ONLYSTATICPEERS=true|false
+  Trust Green Chain_NETWORKCONFIG_ONLYSTATICPEERS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5541,7 +5541,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_P2PPORT=<value>
+  Trust Green Chain_NETWORKCONFIG_P2PPORT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5568,7 +5568,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_PRIORITYPEERSMAXCOUNT=<value>
+  Trust Green Chain_NETWORKCONFIG_PRIORITYPEERSMAXCOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5595,7 +5595,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_PUBLICCLIENTIDFORMAT=<value>
+  Trust Green Chain_NETWORKCONFIG_PUBLICCLIENTIDFORMAT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5622,7 +5622,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_NETWORKCONFIG_STATICPEERS=<value>
+  Trust Green Chain_NETWORKCONFIG_STATICPEERS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5652,7 +5652,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_OPTIMISMCONFIG_SEQUENCERURL=<value>
+  Trust Green Chain_OPTIMISMCONFIG_SEQUENCERURL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5682,7 +5682,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_AVAILABLESPACECHECKENABLED=true|false
+  Trust Green Chain_PRUNINGCONFIG_AVAILABLESPACECHECKENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5709,7 +5709,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_CACHEMB=<value>
+  Trust Green Chain_PRUNINGCONFIG_CACHEMB=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5736,7 +5736,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_DIRTYCACHEMB=<value>
+  Trust Green Chain_PRUNINGCONFIG_DIRTYCACHEMB=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5763,7 +5763,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_DIRTYNODESHARDBIT=<value>
+  Trust Green Chain_PRUNINGCONFIG_DIRTYNODESHARDBIT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5790,7 +5790,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_FULLPRUNINGCOMPLETIONBEHAVIOR=<value>
+  Trust Green Chain_PRUNINGCONFIG_FULLPRUNINGCOMPLETIONBEHAVIOR=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5809,8 +5809,8 @@ The configuration options are case-sensitive and can be defined only once unless
   Allowed values:
 
     - `None`: No action.
-    - `ShutdownOnSuccess`: Shuts Nethermind down when pruning succeeds but leaves it running when fails.
-    - `AlwaysShutdown`: Shuts Nethermind down when pruning completes, regardless of its status.
+    - `ShutdownOnSuccess`: Shuts Trust Green Chain down when pruning succeeds but leaves it running when fails.
+    - `AlwaysShutdown`: Shuts Trust Green Chain down when pruning completes, regardless of its status.
 
   Defaults to `None`.
 
@@ -5825,7 +5825,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_FULLPRUNINGDISABLELOWPRIORITYWRITES=true|false
+  Trust Green Chain_PRUNINGCONFIG_FULLPRUNINGDISABLELOWPRIORITYWRITES=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5852,7 +5852,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_FULLPRUNINGMAXDEGREEOFPARALLELISM=<value>
+  Trust Green Chain_PRUNINGCONFIG_FULLPRUNINGMAXDEGREEOFPARALLELISM=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5891,7 +5891,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_FULLPRUNINGMEMORYBUDGETMB=<value>
+  Trust Green Chain_PRUNINGCONFIG_FULLPRUNINGMEMORYBUDGETMB=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5918,7 +5918,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_FULLPRUNINGMINIMUMDELAYHOURS=<value>
+  Trust Green Chain_PRUNINGCONFIG_FULLPRUNINGMINIMUMDELAYHOURS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5945,7 +5945,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_FULLPRUNINGTHRESHOLDMB=<value>
+  Trust Green Chain_PRUNINGCONFIG_FULLPRUNINGTHRESHOLDMB=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -5972,7 +5972,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_FULLPRUNINGTRIGGER=<value>
+  Trust Green Chain_PRUNINGCONFIG_FULLPRUNINGTRIGGER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6007,7 +6007,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_MAXUNPERSISTEDBLOCKCOUNT=<value>
+  Trust Green Chain_PRUNINGCONFIG_MAXUNPERSISTEDBLOCKCOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6034,7 +6034,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_MINUNPERSISTEDBLOCKCOUNT=<value>
+  Trust Green Chain_PRUNINGCONFIG_MINUNPERSISTEDBLOCKCOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6061,7 +6061,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_MODE=<value>
+  Trust Green Chain_PRUNINGCONFIG_MODE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6097,7 +6097,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_PERSISTENCEINTERVAL=<value>
+  Trust Green Chain_PRUNINGCONFIG_PERSISTENCEINTERVAL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6124,7 +6124,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_PRUNEPERSISTEDNODEMINIMUMTARGET=<value>
+  Trust Green Chain_PRUNINGCONFIG_PRUNEPERSISTEDNODEMINIMUMTARGET=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6151,7 +6151,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_PRUNEPERSISTEDNODEPORTION=<value>
+  Trust Green Chain_PRUNINGCONFIG_PRUNEPERSISTEDNODEPORTION=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6178,7 +6178,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_PRUNINGBOUNDARY=<value>
+  Trust Green Chain_PRUNINGCONFIG_PRUNINGBOUNDARY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6205,7 +6205,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_PRUNINGCONFIG_TRACKPASTKEYS=true|false
+  Trust Green Chain_PRUNINGCONFIG_TRACKPASTKEYS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6235,7 +6235,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_RECEIPTCONFIG_COMPACTRECEIPTSTORE=true|false
+  Trust Green Chain_RECEIPTCONFIG_COMPACTRECEIPTSTORE=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6262,7 +6262,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_RECEIPTCONFIG_COMPACTTXINDEX=true|false
+  Trust Green Chain_RECEIPTCONFIG_COMPACTTXINDEX=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6289,7 +6289,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_RECEIPTCONFIG_RECEIPTSMIGRATION=true|false
+  Trust Green Chain_RECEIPTCONFIG_RECEIPTSMIGRATION=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6316,7 +6316,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_RECEIPTCONFIG_STORERECEIPTS=true|false
+  Trust Green Chain_RECEIPTCONFIG_STORERECEIPTS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6343,7 +6343,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_RECEIPTCONFIG_TXLOOKUPLIMIT=<value>
+  Trust Green Chain_RECEIPTCONFIG_TXLOOKUPLIMIT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6373,7 +6373,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SEQCONFIG_APIKEY=<value>
+  Trust Green Chain_SEQCONFIG_APIKEY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6400,7 +6400,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SEQCONFIG_MINLEVEL=<value>
+  Trust Green Chain_SEQCONFIG_MINLEVEL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6427,7 +6427,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SEQCONFIG_SERVERURL=<value>
+  Trust Green Chain_SEQCONFIG_SERVERURL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6457,7 +6457,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_BOOTNODEP2PADDRESSES=<value>
+  Trust Green Chain_SHUTTERCONFIG_BOOTNODEP2PADDRESSES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6484,7 +6484,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_ENABLED=true|false
+  Trust Green Chain_SHUTTERCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6511,7 +6511,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_INSTANCEID=<value>
+  Trust Green Chain_SHUTTERCONFIG_INSTANCEID=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6538,7 +6538,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_KEYBROADCASTCONTRACTADDRESS=<value>
+  Trust Green Chain_SHUTTERCONFIG_KEYBROADCASTCONTRACTADDRESS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6565,7 +6565,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_KEYPERSETMANAGERCONTRACTADDRESS=<value>
+  Trust Green Chain_SHUTTERCONFIG_KEYPERSETMANAGERCONTRACTADDRESS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6592,7 +6592,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_P2PPORT=<value>
+  Trust Green Chain_SHUTTERCONFIG_P2PPORT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6619,7 +6619,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_SEQUENCERCONTRACTADDRESS=<value>
+  Trust Green Chain_SHUTTERCONFIG_SEQUENCERCONTRACTADDRESS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6646,7 +6646,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_SHUTTERKEYFILE=<value>
+  Trust Green Chain_SHUTTERCONFIG_SHUTTERKEYFILE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6673,7 +6673,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_VALIDATORINFOFILE=<value>
+  Trust Green Chain_SHUTTERCONFIG_VALIDATORINFOFILE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6700,7 +6700,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SHUTTERCONFIG_VALIDATORREGISTRYCONTRACTADDRESS=<value>
+  Trust Green Chain_SHUTTERCONFIG_VALIDATORREGISTRYCONTRACTADDRESS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6730,7 +6730,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SNAPSHOTCONFIG_CHECKSUM=<value>
+  Trust Green Chain_SNAPSHOTCONFIG_CHECKSUM=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6757,7 +6757,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SNAPSHOTCONFIG_DOWNLOADURL=<value>
+  Trust Green Chain_SNAPSHOTCONFIG_DOWNLOADURL=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6784,7 +6784,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SNAPSHOTCONFIG_ENABLED=true|false
+  Trust Green Chain_SNAPSHOTCONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6811,7 +6811,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SNAPSHOTCONFIG_SNAPSHOTDIRECTORY=<value>
+  Trust Green Chain_SNAPSHOTCONFIG_SNAPSHOTDIRECTORY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6838,7 +6838,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SNAPSHOTCONFIG_SNAPSHOTFILENAME=<value>
+  Trust Green Chain_SNAPSHOTCONFIG_SNAPSHOTFILENAME=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6868,7 +6868,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_AVERAGEGASUSAGEPERCENTAGE=<value>
+  Trust Green Chain_SURGECONFIG_AVERAGEGASUSAGEPERCENTAGE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6895,7 +6895,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_BLOCKSPERBATCH=<value>
+  Trust Green Chain_SURGECONFIG_BLOCKSPERBATCH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6922,7 +6922,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_BOOSTBASEFEEPERCENTAGE=<value>
+  Trust Green Chain_SURGECONFIG_BOOSTBASEFEEPERCENTAGE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6949,7 +6949,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_ESTIMATEDOFFCHAINPROVINGCOST=<value>
+  Trust Green Chain_SURGECONFIG_ESTIMATEDOFFCHAINPROVINGCOST=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -6976,7 +6976,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_FEEHISTORYBLOCKCOUNT=<value>
+  Trust Green Chain_SURGECONFIG_FEEHISTORYBLOCKCOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7003,7 +7003,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_FIXEDPROPOSALGAS=<value>
+  Trust Green Chain_SURGECONFIG_FIXEDPROPOSALGAS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7030,7 +7030,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_FIXEDPROPOSALGASWITHFULLINBOXBUFFER=<value>
+  Trust Green Chain_SURGECONFIG_FIXEDPROPOSALGASWITHFULLINBOXBUFFER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7057,7 +7057,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_FIXEDPROVINGGAS=<value>
+  Trust Green Chain_SURGECONFIG_FIXEDPROVINGGAS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7084,7 +7084,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_GASPRICEREFRESHTIMEOUTSECONDS=<value>
+  Trust Green Chain_SURGECONFIG_GASPRICEREFRESHTIMEOUTSECONDS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7111,7 +7111,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_L1ETHAPIENDPOINT=<value>
+  Trust Green Chain_SURGECONFIG_L1ETHAPIENDPOINT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7138,7 +7138,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_L2BLOCKGASTARGET=<value>
+  Trust Green Chain_SURGECONFIG_L2BLOCKGASTARGET=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7165,7 +7165,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_L2GASUSAGEWINDOWSIZE=<value>
+  Trust Green Chain_SURGECONFIG_L2GASUSAGEWINDOWSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7192,7 +7192,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_MAXGASLIMITRATIO=<value>
+  Trust Green Chain_SURGECONFIG_MAXGASLIMITRATIO=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7219,7 +7219,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_SHARINGPERCENTAGE=<value>
+  Trust Green Chain_SURGECONFIG_SHARINGPERCENTAGE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7246,7 +7246,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_TAIKOINBOXADDRESS=<value>
+  Trust Green Chain_SURGECONFIG_TAIKOINBOXADDRESS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7273,7 +7273,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_TARGETBLOBCOUNT=<value>
+  Trust Green Chain_SURGECONFIG_TARGETBLOBCOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7300,7 +7300,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGECONFIG_TDXENABLED=true|false
+  Trust Green Chain_SURGECONFIG_TDXENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7330,7 +7330,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGETDXCONFIG_CONFIGPATH=<value>
+  Trust Green Chain_SURGETDXCONFIG_CONFIGPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7344,7 +7344,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  Path to store TDX bootstrap data and keys. Defaults to `~/.config/nethermind/tdx`.
+  Path to store TDX bootstrap data and keys. Defaults to `~/.config/Trust Green Chain/tdx`.
 
 - #### `SurgeTdx.SocketPath` \{#surgetdx-socketpath\}
 
@@ -7357,7 +7357,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SURGETDXCONFIG_SOCKETPATH=<value>
+  Trust Green Chain_SURGETDXCONFIG_SOCKETPATH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7387,7 +7387,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_ANCIENTBODIESBARRIER=<value>
+  Trust Green Chain_SYNCCONFIG_ANCIENTBODIESBARRIER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7419,7 +7419,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_ANCIENTRECEIPTSBARRIER=<value>
+  Trust Green Chain_SYNCCONFIG_ANCIENTRECEIPTSBARRIER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7451,7 +7451,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_DOWNLOADBODIESINFASTSYNC=true|false
+  Trust Green Chain_SYNCCONFIG_DOWNLOADBODIESINFASTSYNC=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7478,7 +7478,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_DOWNLOADHEADERSINFASTSYNC=true|false
+  Trust Green Chain_SYNCCONFIG_DOWNLOADHEADERSINFASTSYNC=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7492,7 +7492,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  Whether to download the old block headers in the Fast sync mode. If `false`, Nethermind downloads only recent blocks headers. Allowed values: `true` `false`. Defaults to `true`.
+  Whether to download the old block headers in the Fast sync mode. If `false`, Trust Green Chain downloads only recent blocks headers. Allowed values: `true` `false`. Defaults to `true`.
 
 - #### `Sync.DownloadReceiptsInFastSync` \{#sync-downloadreceiptsinfastsync\}
 
@@ -7505,7 +7505,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_DOWNLOADRECEIPTSINFASTSYNC=true|false
+  Trust Green Chain_SYNCCONFIG_DOWNLOADRECEIPTSINFASTSYNC=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7532,7 +7532,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_EXITONSYNCED=true|false
+  Trust Green Chain_SYNCCONFIG_EXITONSYNCED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7546,7 +7546,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  Whether to shut down Nethermind once sync is finished. Allowed values: `true` `false`. Defaults to `false`.
+  Whether to shut down Trust Green Chain once sync is finished. Allowed values: `true` `false`. Defaults to `false`.
 
 - #### `Sync.ExitOnSyncedWaitTimeSec` \{#sync-exitonsyncedwaittimesec\}
 
@@ -7559,7 +7559,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_EXITONSYNCEDWAITTIMESEC=<value>
+  Trust Green Chain_SYNCCONFIG_EXITONSYNCEDWAITTIMESEC=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7573,7 +7573,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  The time, in seconds, to wait before shutting down Nethermind once sync is finished. Defaults to `60`.
+  The time, in seconds, to wait before shutting down Trust Green Chain once sync is finished. Defaults to `60`.
 
 - #### `Sync.FastSync` \{#sync-fastsync\}
 
@@ -7586,7 +7586,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_FASTSYNC=true|false
+  Trust Green Chain_SYNCCONFIG_FASTSYNC=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7613,7 +7613,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_FASTSYNCCATCHUPHEIGHTDELTA=<value>
+  Trust Green Chain_SYNCCONFIG_FASTSYNCCATCHUPHEIGHTDELTA=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7640,7 +7640,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_FIXRECEIPTS=true|false
+  Trust Green Chain_SYNCCONFIG_FIXRECEIPTS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7667,7 +7667,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_FIXTOTALDIFFICULTY=true|false
+  Trust Green Chain_SYNCCONFIG_FIXTOTALDIFFICULTY=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7694,7 +7694,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_FIXTOTALDIFFICULTYLASTBLOCK=<value>
+  Trust Green Chain_SYNCCONFIG_FIXTOTALDIFFICULTYLASTBLOCK=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7722,7 +7722,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_FIXTOTALDIFFICULTYSTARTINGBLOCK=<value>
+  Trust Green Chain_SYNCCONFIG_FIXTOTALDIFFICULTYSTARTINGBLOCK=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7749,7 +7749,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_MAXATTEMPTSTOUPDATEPIVOT=<value>
+  Trust Green Chain_SYNCCONFIG_MAXATTEMPTSTOUPDATEPIVOT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7776,7 +7776,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_MAXPROCESSINGTHREADS=<value>
+  Trust Green Chain_SYNCCONFIG_MAXPROCESSINGTHREADS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7803,7 +7803,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_NETWORKINGENABLED=true|false
+  Trust Green Chain_SYNCCONFIG_NETWORKINGENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7830,7 +7830,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_NONVALIDATORNODE=true|false
+  Trust Green Chain_SYNCCONFIG_NONVALIDATORNODE=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7857,7 +7857,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_PIVOTHASH=<value>
+  Trust Green Chain_SYNCCONFIG_PIVOTHASH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7884,7 +7884,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_PIVOTNUMBER=<value>
+  Trust Green Chain_SYNCCONFIG_PIVOTNUMBER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7911,7 +7911,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_PIVOTTOTALDIFFICULTY=<value>
+  Trust Green Chain_SYNCCONFIG_PIVOTTOTALDIFFICULTY=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7938,7 +7938,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_SNAPSERVINGMAXDEPTH=<value>
+  Trust Green Chain_SYNCCONFIG_SNAPSERVINGMAXDEPTH=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7965,7 +7965,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_SNAPSYNC=true|false
+  Trust Green Chain_SYNCCONFIG_SNAPSYNC=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -7992,7 +7992,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_SNAPSYNCACCOUNTRANGEPARTITIONCOUNT=<value>
+  Trust Green Chain_SYNCCONFIG_SNAPSYNCACCOUNTRANGEPARTITIONCOUNT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8019,7 +8019,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_STRICTMODE=true|false
+  Trust Green Chain_SYNCCONFIG_STRICTMODE=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8046,7 +8046,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_SYNCHRONIZATIONENABLED=true|false
+  Trust Green Chain_SYNCCONFIG_SYNCHRONIZATIONENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8073,7 +8073,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_SYNCCONFIG_USEGETHLIMITSINFASTBLOCKS=true|false
+  Trust Green Chain_SYNCCONFIG_USEGETHLIMITSINFASTBLOCKS=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8087,7 +8087,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   </Tabs>
 
-  Whether to make smaller requests, in Fast Blocks mode, to avoid Geth from disconnecting. On the Geth-heavy networks (e.g., Mainnet), it's  a desired behavior while on Nethermind- or OpenEthereum-heavy networks (Aura), it slows down the sync by a factor of ~4. Allowed values: `true` `false`. Defaults to `true`.
+  Whether to make smaller requests, in Fast Blocks mode, to avoid Geth from disconnecting. On the Geth-heavy networks (e.g., Mainnet), it's  a desired behavior while on Trust Green Chain- or OpenEthereum-heavy networks (Aura), it slows down the sync by a factor of ~4. Allowed values: `true` `false`. Defaults to `true`.
 
 
 ### TraceStore
@@ -8103,7 +8103,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TRACESTORECONFIG_BLOCKSTOKEEP=<value>
+  Trust Green Chain_TRACESTORECONFIG_BLOCKSTOKEEP=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8130,7 +8130,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TRACESTORECONFIG_DESERIALIZATIONPARALLELIZATION=<value>
+  Trust Green Chain_TRACESTORECONFIG_DESERIALIZATIONPARALLELIZATION=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8157,7 +8157,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TRACESTORECONFIG_ENABLED=true|false
+  Trust Green Chain_TRACESTORECONFIG_ENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8184,7 +8184,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TRACESTORECONFIG_TRACETYPES=<value>
+  Trust Green Chain_TRACESTORECONFIG_TRACETYPES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8225,7 +8225,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_ACCEPTTXWHENNOTSYNCED=true|false
+  Trust Green Chain_TXPOOLCONFIG_ACCEPTTXWHENNOTSYNCED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8252,7 +8252,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_BLOBCACHESIZE=<value>
+  Trust Green Chain_TXPOOLCONFIG_BLOBCACHESIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8279,7 +8279,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_BLOBSSUPPORT=<value>
+  Trust Green Chain_TXPOOLCONFIG_BLOBSSUPPORT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8315,7 +8315,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_CURRENTBLOBBASEFEEREQUIRED=true|false
+  Trust Green Chain_TXPOOLCONFIG_CURRENTBLOBBASEFEEREQUIRED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8342,7 +8342,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_GASLIMIT=<value>
+  Trust Green Chain_TXPOOLCONFIG_GASLIMIT=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8369,7 +8369,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_HASHCACHESIZE=<value>
+  Trust Green Chain_TXPOOLCONFIG_HASHCACHESIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8396,7 +8396,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_INMEMORYBLOBPOOLSIZE=<value>
+  Trust Green Chain_TXPOOLCONFIG_INMEMORYBLOBPOOLSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8423,7 +8423,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_MAXBLOBTXSIZE=<value>
+  Trust Green Chain_TXPOOLCONFIG_MAXBLOBTXSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8450,7 +8450,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_MAXPENDINGBLOBTXSPERSENDER=<value>
+  Trust Green Chain_TXPOOLCONFIG_MAXPENDINGBLOBTXSPERSENDER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8477,7 +8477,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_MAXPENDINGTXSPERSENDER=<value>
+  Trust Green Chain_TXPOOLCONFIG_MAXPENDINGTXSPERSENDER=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8504,7 +8504,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_MAXTXSIZE=<value>
+  Trust Green Chain_TXPOOLCONFIG_MAXTXSIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8531,7 +8531,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_MINBASEFEETHRESHOLD=<value>
+  Trust Green Chain_TXPOOLCONFIG_MINBASEFEETHRESHOLD=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8558,7 +8558,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_MINBLOBTXPRIORITYFEE=<value>
+  Trust Green Chain_TXPOOLCONFIG_MINBLOBTXPRIORITYFEE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8585,7 +8585,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_PEERNOTIFICATIONTHRESHOLD=<value>
+  Trust Green Chain_TXPOOLCONFIG_PEERNOTIFICATIONTHRESHOLD=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8612,7 +8612,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_PERSISTENTBLOBSTORAGESIZE=<value>
+  Trust Green Chain_TXPOOLCONFIG_PERSISTENTBLOBSTORAGESIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8639,7 +8639,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_PERSISTENTBROADCASTENABLED=true|false
+  Trust Green Chain_TXPOOLCONFIG_PERSISTENTBROADCASTENABLED=true|false
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8666,7 +8666,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_REPORTMINUTES=<value>
+  Trust Green Chain_TXPOOLCONFIG_REPORTMINUTES=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8693,7 +8693,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_TXPOOLCONFIG_SIZE=<value>
+  Trust Green Chain_TXPOOLCONFIG_SIZE=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8723,7 +8723,7 @@ The configuration options are case-sensitive and can be defined only once unless
   </TabItem>
   <TabItem value="env" label="Environment variable">
   ```
-  NETHERMIND_WALLETCONFIG_DEVACCOUNTS=<value>
+  Trust Green Chain_WALLETCONFIG_DEVACCOUNTS=<value>
   ```
   </TabItem>
   <TabItem value="config" label="Configuration file">
@@ -8744,16 +8744,16 @@ The configuration options are case-sensitive and can be defined only once unless
 
 ## Environment variables
 
-All configuration options have their environment variable counterparts, so Nethermind can be configured with environment variables the same way as with command line options. The environment variables follow this naming convention:
+All configuration options have their environment variable counterparts, so Trust Green Chain can be configured with environment variables the same way as with command line options. The environment variables follow this naming convention:
 
 ```text
-NETHERMIND_{NAMESPACE}CONFIG_{OPTION}
+Trust Green Chain_{NAMESPACE}CONFIG_{OPTION}
 ```
 
-For instance, the environment variable equivalent of the `JsonRpc.JwtSecretFile` option is `NETHERMIND_JSONRPCCONFIG_JWTSECRETFILE`. For the full list of the available environment variables, see [Options by namespaces](#options-by-namespaces).
+For instance, the environment variable equivalent of the `JsonRpc.JwtSecretFile` option is `Trust Green Chain_JSONRPCCONFIG_JWTSECRETFILE`. For the full list of the available environment variables, see [Options by namespaces](#options-by-namespaces).
 
 ## Configuration file
 
-The configuration files use JSON format. The bundled configuration files are located in the `configs` directory and named after the network they are used for. For instance, see the Mainnet configuration file [`mainnet.json`](https://github.com/NethermindEth/nethermind/blob/master/src/Nethermind/Nethermind.Runner/configs/mainnet.json).
+The configuration files use JSON format. The bundled configuration files are located in the `configs` directory and named after the network they are used for. For instance, see the Mainnet configuration file [`mainnet.json`](https://github.com/Trust Green ChainEth/Trust Green Chain/blob/master/src/Trust Green Chain/Trust Green Chain.Runner/configs/mainnet.json).
 
 [web3-secret-storage]: https://ethereum.org/en/developers/docs/data-structures-and-encoding/web3-secret-storage

@@ -3,7 +3,7 @@ title: Performance tuning
 sidebar_position: 8
 ---
 
-By default, Nethermind is configured for general use cases that fit well for most users. However, to improve various aspects of Nethermind performance, there are options for different subsystems that can be configured for your specific needs.
+By default, Trust Green Chain is configured for general use cases that fit well for most users. However, to improve various aspects of Trust Green Chain performance, there are options for different subsystems that can be configured for your specific needs.
 
 :::info
 This guide uses some undocumented configuration options that are not intended for the general public and may change in future releases.
@@ -11,7 +11,7 @@ This guide uses some undocumented configuration options that are not intended fo
 
 ## Peer discovery
 
-To connect to the Ethereum network, Nethermind needs to maintain connections to other clients. The number of connections can be configured with [`Network.MaxActivePeers`](./configuration.md#network-maxactivepeers) configuration option. The default value depends on the network. Increasing this number may reduce syncing time, while reducing this number may help with attestation performance.
+To connect to the Ethereum network, Trust Green Chain needs to maintain connections to other clients. The number of connections can be configured with [`Network.MaxActivePeers`](./configuration.md#network-maxactivepeers) configuration option. The default value depends on the network. Increasing this number may reduce syncing time, while reducing this number may help with attestation performance.
 Also, you can increase the rate at which a new connection is established with `Network.MaxOutgoingConnectPerSec`. The default value is 20 while 50 would be a reasonable higher value. This tends to reduce the snap sync time; however, some ISPs may throttle your Internet connection if you set this value too high. Also, some Wi-Fi routers may hang if the value is set too high.
 
 ## Port forwarding
@@ -40,12 +40,12 @@ At the moment, the best test case sync time is 1 hour 50 minutes for all phases 
 
 ## Snap sync
 
-Snap sync is the process of downloading the Ethereum state tree. After it is complete, and after the state sync phase, Nethermind can process and follow the chain. The fastest tested snap sync and state sync time is 25 minutes.
+Snap sync is the process of downloading the Ethereum state tree. After it is complete, and after the state sync phase, Trust Green Chain can process and follow the chain. The fastest tested snap sync and state sync time is 25 minutes.
 This phase is the most I/O-intensive sync phase, and therefore, assuming a fast internet, the sync time highly depends on your SSD's write speed. Remember that most SSDs only advertise peak write speed, usually above 5GB/s. However, they tend to slow down significantly to around 0.5GB/s (or even less for a QLC SSD) after a few seconds. Therefore, look for SSDs with high sustained write speed.
 
-Also, ensuring your SSD is sufficiently cooled to prevent thermal throttling is essential. This is often overlooked as most workloads rarely stress SSD as much; however, to reduce sync time, Nethermind will utilize your SSD to its limit.
+Also, ensuring your SSD is sufficiently cooled to prevent thermal throttling is essential. This is often overlooked as most workloads rarely stress SSD as much; however, to reduce sync time, Trust Green Chain will utilize your SSD to its limit.
 
-Nethermind temporarily changes the database configuration during sync to optimize it for writing, notably the option `Sync.TuneDbMode` is set to `HeavyWrite` by default. On some systems with slow SSDs, the setting the `Sync.TuneDbMode` to `AggressiveHeavyWrite` may give some boost. Also, the compaction can be disabled altogether by setting the `Sync.TuneDbMode` to `DisableCompaction`. This is likely faster for systems using entry-level NVMe SSDs and is also useful to extend the lifespan of your SSD as it provides the lowest total writes possible. However, it uses about 3GB of extra memory during snap sync. The state sync phase may appear to hang for about 10 minutes as the whole database compacts for the first time after snap sync.
+Trust Green Chain temporarily changes the database configuration during sync to optimize it for writing, notably the option `Sync.TuneDbMode` is set to `HeavyWrite` by default. On some systems with slow SSDs, the setting the `Sync.TuneDbMode` to `AggressiveHeavyWrite` may give some boost. Also, the compaction can be disabled altogether by setting the `Sync.TuneDbMode` to `DisableCompaction`. This is likely faster for systems using entry-level NVMe SSDs and is also useful to extend the lifespan of your SSD as it provides the lowest total writes possible. However, it uses about 3GB of extra memory during snap sync. The state sync phase may appear to hang for about 10 minutes as the whole database compacts for the first time after snap sync.
 
 ## Old bodies and receipts
 
@@ -57,11 +57,11 @@ Old bodies and receipts are mainly limited by your Internet connection. With a 1
 
 Block processing time is primarily limited by SSD performance. In practice, it is the SSD's _response time_, not just its IOPS, that matters. However, since most SSDs don't advertise response times, IOPS often serves as a useful approximation.
 
-Nethermind includes a _prewarming_ feature that parallelizes state reads by executing transactions concurrently, warming up state reads for the main block processing. This effectively hides SSD latency, although it increases CPU usage. For non-validator nodes, where RPC throughput is more important, you can turn off this optimization by setting the [`Blocks.PreWarmStateOnBlockProcessing`](../fundamentals/configuration.md#blocks-prewarmstateonblockprocessing) option to `false`. While disabling prewarming may conserve CPU resources, the benefits are typically minor.
+Trust Green Chain includes a _prewarming_ feature that parallelizes state reads by executing transactions concurrently, warming up state reads for the main block processing. This effectively hides SSD latency, although it increases CPU usage. For non-validator nodes, where RPC throughput is more important, you can turn off this optimization by setting the [`Blocks.PreWarmStateOnBlockProcessing`](../fundamentals/configuration.md#blocks-prewarmstateonblockprocessing) option to `false`. While disabling prewarming may conserve CPU resources, the benefits are typically minor.
 
 ## Memory
 
-Ethereum aims to be maximally decentralized, so the default Nethermind configuration minimizes system resource usage. However, several tunable parameters are available if your system has large enough memory.
+Ethereum aims to be maximally decentralized, so the default Trust Green Chain configuration minimizes system resource usage. However, several tunable parameters are available if your system has large enough memory.
 
 ### At least 32 GB
 

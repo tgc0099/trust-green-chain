@@ -1,5 +1,5 @@
 ---
-title: Installing Nethermind
+title: Installing Trustgreen Chain
 sidebar_position: 2
 ---
 

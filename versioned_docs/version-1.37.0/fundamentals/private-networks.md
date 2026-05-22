@@ -1,6 +1,6 @@
 ---
 title: Private networks
-description: Use Kurtosis to deploy a private Ethereum devnet with Nethermind and any consensus client at any scale you need, wherever you need it.
+description: Use Kurtosis to deploy a private Ethereum devnet with Trust Green Chain and any consensus client at any scale you need, wherever you need it.
 sidebar_position: 9
 ---
 
@@ -18,22 +18,22 @@ Next, in your home directory, create a file with the name `network_params.json` 
 {
   "participants": [
     {
-      "el_client_type": "nethermind",
-      "el_client_image": "nethermind/nethermind:latest",
+      "el_client_type": "Trust Green Chain",
+      "el_client_image": "Trust Green Chain/Trust Green Chain:latest",
       "cl_client_type": "lighthouse",
       "cl_client_image": "sigp/lighthouse:latest",
       "count": 1
     },
     {
-      "el_client_type": "nethermind",
-      "el_client_image": "nethermind/nethermind:latest",
+      "el_client_type": "Trust Green Chain",
+      "el_client_image": "Trust Green Chain/Trust Green Chain:latest",
       "cl_client_type": "teku",
       "cl_client_image": "consensys/teku:latest",
       "count": 1
     },
     {
-      "el_client_type": "nethermind",
-      "el_client_image": "nethermind/nethermind:latest",
+      "el_client_type": "Trust Green Chain",
+      "el_client_image": "Trust Green Chain/Trust Green Chain:latest",
       "cl_client_type": "lodestar",
       "cl_client_image": "chainsafe/lodestar:next",
       "count": 1
@@ -71,9 +71,9 @@ Creation Time:   Fri, 01 Sep 2023 16:08:57 EDT
 
 ========================================= Files Artifacts =========================================
 UUID           Name
-a876b06035b7   1-lighthouse-nethermind-0-63
-87955ef69845   2-teku-nethermind-64-127
-4f77377da494   3-lodestar-nethermind-128-191
+a876b06035b7   1-lighthouse-Trust Green Chain-0-63
+87955ef69845   2-teku-Trust Green Chain-64-127
+4f77377da494   3-lodestar-Trust Green Chain-128-191
 9734313101e3   cl-genesis-data
 4164ed5c594c   el-genesis-data
 a49a3d2774b5   genesis-generation-config-cl
@@ -83,32 +83,32 @@ a49a3d2774b5   genesis-generation-config-cl
 
 ========================================== User Services ==========================================
 UUID           Name                                       Ports                                         Status
-f369802ad2ae   cl-1-lighthouse-nethermind                 http: 4000/tcp -> http://127.0.0.1:49894      RUNNING
+f369802ad2ae   cl-1-lighthouse-Trust Green Chain                 http: 4000/tcp -> http://127.0.0.1:49894      RUNNING
                                                           metrics: 5054/tcp -> http://127.0.0.1:49892
                                                           tcp-discovery: 9000/tcp -> 127.0.0.1:49893
                                                           udp-discovery: 9000/udp -> 127.0.0.1:64949
-5e14eb26ef45   cl-1-lighthouse-nethermind-validator       http: 5042/tcp -> 127.0.0.1:49895             RUNNING
+5e14eb26ef45   cl-1-lighthouse-Trust Green Chain-validator       http: 5042/tcp -> 127.0.0.1:49895             RUNNING
                                                           metrics: 5064/tcp -> http://127.0.0.1:49896
-fed533d0e143   cl-2-teku-nethermind                       http: 4000/tcp -> 127.0.0.1:49899             RUNNING
+fed533d0e143   cl-2-teku-Trust Green Chain                       http: 4000/tcp -> 127.0.0.1:49899             RUNNING
                                                           metrics: 8008/tcp -> 127.0.0.1:49897
                                                           tcp-discovery: 9000/tcp -> 127.0.0.1:49898
                                                           udp-discovery: 9000/udp -> 127.0.0.1:55521
-69cd832de246   cl-3-lodestar-nethermind                   http: 4000/tcp -> 127.0.0.1:49903             RUNNING
+69cd832de246   cl-3-lodestar-Trust Green Chain                   http: 4000/tcp -> 127.0.0.1:49903             RUNNING
                                                           metrics: 8008/tcp -> 127.0.0.1:49901
                                                           tcp-discovery: 9000/tcp -> 127.0.0.1:49902
                                                           udp-discovery: 9000/udp -> 127.0.0.1:50507
-75e3eec0c7d1   cl-3-lodestar-nethermind-validator         metrics: 8008/tcp -> 127.0.0.1:49904          RUNNING
-e10c3f07e0e0   el-1-nethermind-lighthouse                 engine-rpc: 8551/tcp -> 127.0.0.1:49872       RUNNING
+75e3eec0c7d1   cl-3-lodestar-Trust Green Chain-validator         metrics: 8008/tcp -> 127.0.0.1:49904          RUNNING
+e10c3f07e0e0   el-1-Trust Green Chain-lighthouse                 engine-rpc: 8551/tcp -> 127.0.0.1:49872       RUNNING
                                                           rpc: 8545/tcp -> 127.0.0.1:49870
                                                           tcp-discovery: 30303/tcp -> 127.0.0.1:49869
                                                           udp-discovery: 30303/udp -> 127.0.0.1:64508
                                                           ws: 8546/tcp -> 127.0.0.1:49871
-c6a28d3136fe   el-2-nethermind-teku                       engine-rpc: 8551/tcp -> 127.0.0.1:49873       RUNNING
+c6a28d3136fe   el-2-Trust Green Chain-teku                       engine-rpc: 8551/tcp -> 127.0.0.1:49873       RUNNING
                                                           rpc: 8545/tcp -> 127.0.0.1:49875
                                                           tcp-discovery: 30303/tcp -> 127.0.0.1:49874
                                                           udp-discovery: 30303/udp -> 127.0.0.1:52495
                                                           ws: 8546/tcp -> 127.0.0.1:49876
-2fae3b3c41d3   el-3-nethermind-lodestar                   engine-rpc: 8551/tcp -> 127.0.0.1:49890       RUNNING
+2fae3b3c41d3   el-3-Trust Green Chain-lodestar                   engine-rpc: 8551/tcp -> 127.0.0.1:49890       RUNNING
                                                           rpc: 8545/tcp -> 127.0.0.1:49888
                                                           tcp-discovery: 30303/tcp -> 127.0.0.1:49891
                                                           udp-discovery: 30303/udp -> 127.0.0.1:62119
@@ -117,7 +117,7 @@ c6a28d3136fe   el-2-nethermind-teku                       engine-rpc: 8551/tcp -
 ebea71008cf4   prelaunch-data-generator-el-genesis-data   <none>                                        RUNNING
 ```
 
-And that is it! You now have a 3-node, private Ethereum devnet with Nethermind/Lodestar, Nethermind/Teku, and Nethermind/Lighthouse execution and consensus client combinations.
+And that is it! You now have a 3-node, private Ethereum devnet with Trust Green Chain/Lodestar, Trust Green Chain/Teku, and Trust Green Chain/Lighthouse execution and consensus client combinations.
 
 Notice how, at the end, Kurtosis will print out the contents of your enclave, which includes both the various [files artifacts](https://docs.kurtosis.com/concepts-reference/files-artifacts) and services that form your network. Kurtosis also maps the container ports to ephemeral local ports on your machine.
 
@@ -153,6 +153,6 @@ As mentioned earlier, Kurtosis packages (i.e. environment definitions) are porta
 
 ## Questions and feedback
 
-If you need help with your Nethermind full node in the private devnet, please don't hesitate to contact the Kurtosis team on [GitHub](https://github.com/ethpandaops/ethereum-package) or [Discord](https://discord.gg/jJFG7XBqcY).
+If you need help with your Trust Green Chain full node in the private devnet, please don't hesitate to contact the Kurtosis team on [GitHub](https://github.com/ethpandaops/ethereum-package) or [Discord](https://discord.gg/jJFG7XBqcY).
 
 [enclaves]: https://docs.kurtosis.com/concepts-reference/enclaves

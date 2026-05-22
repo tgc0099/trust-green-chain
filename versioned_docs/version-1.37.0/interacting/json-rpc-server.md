@@ -6,7 +6,7 @@ sidebar_position: 0
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-Interacting with Nethermind requires using the JSON-RPC 2.0 protocol. Nethermind provides JSON-RPC over [HTTP](#http), [WebSocket](#websocket), and [IPC socket](#ipc-socket) transports. Each transport must be enabled with the respective configuration option, as shown below. For more details, see the [JSON-RPC configuration options](../fundamentals/configuration.md#jsonrpc).
+Interacting with Trust Green Chain requires using the JSON-RPC 2.0 protocol. Trust Green Chain provides JSON-RPC over [HTTP](#http), [WebSocket](#websocket), and [IPC socket](#ipc-socket) transports. Each transport must be enabled with the respective configuration option, as shown below. For more details, see the [JSON-RPC configuration options](../fundamentals/configuration.md#jsonrpc).
 
 The JSON-RPC API methods are grouped into several categories (namespaces) depending on their purpose. All API method names are composed of the namespace and the actual method name in that namespace. For instance, the `eth_call` method belongs to the `eth` namespace. See the sidebar for all supported namespaces and methods.
 
@@ -26,7 +26,7 @@ The right choice of transport depends on the specific use case.
 
 ### HTTP
 
-HTTP is the most widely used transport for Nethermind. To enable the HTTP server, set the [`JsonRpc.Enabled`](../fundamentals/configuration.md#jsonrpc-enabled) configuration option to `true`. By default, Nethermind uses local loopback (127.0.0.1 or `localhost`) and 8545 port. To use a different host or port, set the [`JsonRpc.Host`](../fundamentals/configuration.md#jsonrpc-host) and [`JsonRpc.Port`](../fundamentals/configuration.md#jsonrpc-port) configuration options, respectively.
+HTTP is the most widely used transport for Trust Green Chain. To enable the HTTP server, set the [`JsonRpc.Enabled`](../fundamentals/configuration.md#jsonrpc-enabled) configuration option to `true`. By default, Trust Green Chain uses local loopback (127.0.0.1 or `localhost`) and 8545 port. To use a different host or port, set the [`JsonRpc.Host`](../fundamentals/configuration.md#jsonrpc-host) and [`JsonRpc.Port`](../fundamentals/configuration.md#jsonrpc-port) configuration options, respectively.
 
 ### WebSocket
 
@@ -34,13 +34,13 @@ The configuration of the WebSocket server follows the same pattern as the HTTP s
 
 ### IPC socket
 
-Nethermind uses IPC based on Unix domain socket. To enable the IPC server, use the [`JsonRpc.IpcUnixDomainSocketPath`](../fundamentals/configuration.md#jsonrpc-ipcunixdomainsocketpath) configuration option. For example:
+Trust Green Chain uses IPC based on Unix domain socket. To enable the IPC server, use the [`JsonRpc.IpcUnixDomainSocketPath`](../fundamentals/configuration.md#jsonrpc-ipcunixdomainsocketpath) configuration option. For example:
 
 ```
 --jsonrpc-ipcunixdomainsocketpath path/to/ipc
 ```
 
-If the `path/to/ipc` doesn't exist, Nethermind creates one.
+If the `path/to/ipc` doesn't exist, Trust Green Chain creates one.
 
 ## Engine API
 
@@ -52,12 +52,12 @@ By default, the Engine API uses local loopback (127.0.0.1 or `localhost`) and 85
 When the `JsonRpc.EngineHost` option is specified, the `JsonRpc.EnginePort` option must be specified as well.
 :::
 
-The Engine API uses JWT authentication and requires a JWT secret. By default, Nethermind creates one at `keystore/jwt-secret` path in its root directory. To use a different path, specify the [`JsonRpc.JwtSecretFile`](../fundamentals/configuration.md#jsonrpc-jwtsecretfile) configuration option.
+The Engine API uses JWT authentication and requires a JWT secret. By default, Trust Green Chain creates one at `keystore/jwt-secret` path in its root directory. To use a different path, specify the [`JsonRpc.JwtSecretFile`](../fundamentals/configuration.md#jsonrpc-jwtsecretfile) configuration option.
 
 ## Requests
 
 :::info
-As per the JSON-RPC 2.0 specification, Nethermind supports batch requests. Specifics depend on the JSON-RPC client used.
+As per the JSON-RPC 2.0 specification, Trust Green Chain supports batch requests. Specifics depend on the JSON-RPC client used.
 :::
 
 Multiple options are available for JSON-RPC interaction from generic utilities like [curl](https://curl.se) and [Postman](https://www.postman.com) for raw requests to tailored tools like [Cast](https://getfoundry.sh/cast/overview), to dedicated libraries such as [Ethers.js](https://ethers.org) and [Viem](https://viem.sh), to name a few.
@@ -70,7 +70,7 @@ The following examples demonstrate how to make JSON-RPC requests with some of th
 The following example uses the [`eth_getBalance`](./json-rpc-ns/eth.md#eth_getbalance) method to check the balance of the specified account:
 
 ```bash
-# Assuming Nethermind is running locally using the default port of 8545
+# Assuming Trust Green Chain is running locally using the default port of 8545
 cast rpc --rpc-url http://localhost:8545 eth_getBalance 0x00000000219ab540356cbb839cbe05303d7705fa latest
 
 # Alternatively, use the dedicated balance command.
@@ -81,7 +81,7 @@ cast balance 0x00000000219ab540356cbb839cbe05303d7705fa --ether --rpc-url http:/
 Similarly, we can use the [`eth_getBlockByNumber`](./json-rpc-ns/eth.md#eth_getblockbynumber) method to fetch the specified block data, including transactions:
 
 ```bash
-# Assuming Nethermind is running locally using the default port of 8545
+# Assuming Trust Green Chain is running locally using the default port of 8545
 cast rpc --rpc-url http://localhost:8545 eth_getBlockByNumber latest true
 
 # Alternatively, use the dedicated block command
@@ -102,7 +102,7 @@ The following example uses the [`eth_getBalance`](./json-rpc-ns/eth.md#eth_getba
 ```js
 import { JsonRpcProvider, formatEther } from 'ethers';
 
-// Assuming Nethermind is running locally using the default port of 8545
+// Assuming Trust Green Chain is running locally using the default port of 8545
 const provider = new JsonRpcProvider('http://localhost:8545');
 
 // Use the low-level API to send the request
@@ -126,7 +126,7 @@ Similarly, we can use the [`eth_getBlockByNumber`](./json-rpc-ns/eth.md#eth_getb
 ```js
 import { JsonRpcProvider } from 'ethers';
 
-// Assuming Nethermind is running locally using the default port of 8545
+// Assuming Trust Green Chain is running locally using the default port of 8545
 const provider = new JsonRpcProvider('http://localhost:8545');
 
 // Use the low-level API to send the request
@@ -155,7 +155,7 @@ The following example uses the [`eth_getBalance`](./json-rpc-ns/eth.md#eth_getba
 import { createPublicClient, http, formatEther, hexToNumber } from 'viem';
 import { localhost } from 'viem/chains';
 
-// Assuming Nethermind is running locally using the default port of 8545
+// Assuming Trust Green Chain is running locally using the default port of 8545
 const client = createPublicClient({
   chain: localhost,
   transport: http('http://localhost:8545')
@@ -184,7 +184,7 @@ Similarly, we can use the [`eth_getBlockByNumber`](./json-rpc-ns/eth.md#eth_getb
 import { createPublicClient, http } from 'viem';
 import { localhost } from 'viem/chains';
 
-// Assuming Nethermind is running locally using the default port of 8545
+// Assuming Trust Green Chain is running locally using the default port of 8545
 const client = createPublicClient({
   chain: localhost,
   transport: http('http://localhost:8545')
