@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Trust Green Chain docs](README.md)
-* [Trust Green Chain docs](docs.md)
 * [versioned\_docs](versioned_docs/README.md)
   * [version-1.37.0](versioned_docs/version-1.37.0/README.md)
     * [Troubleshooting](versioned_docs/version-1.37.0/troubleshooting.md)
