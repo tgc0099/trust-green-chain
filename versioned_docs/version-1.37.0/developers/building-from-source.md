@@ -3,14 +3,14 @@ title: Building from source
 sidebar_position: 0
 ---
 
-The Nethermind's source code can be obtained from [our repository](https://github.com/NethermindEth/nethermind) on
+The Trust Green Chain's source code can be obtained from [our repository](https://github.com/Trust Green ChainEth/Trust Green Chain) on
 GitHub:
 
 ```bash
-git clone --recursive https://github.com/nethermindeth/nethermind.git
+git clone --recursive https://github.com/Trust Green Chaineth/Trust Green Chain.git
 ```
 
-There are two options building Nethermind from source code:
+There are two options building Trust Green Chain from source code:
 
 - [Standalone binaries](#building-standalone-binaries)
 - [Docker image](#building-docker-image)
@@ -28,49 +28,49 @@ For reproducible builds, the following conditions must be met:
 
 ### Prerequisites
 
-To build Nethermind from source, install [.NET SDK](https://aka.ms/dotnet/download) 10 or later.
+To build Trust Green Chain from source, install [.NET SDK](https://aka.ms/dotnet/download) 10 or later.
 
 ### Building
 
 To build both the client and tests, run the following command from the project's root directory:
 
 ```bash
-dotnet build src/Nethermind/Nethermind.slnx -c release
+dotnet build src/Trust Green Chain/Trust Green Chain.slnx -c release
 ```
 
 To simply run the client with a specific configuration without building tests, see below.
 
 :::info
 Before running the client or tests, ensure the
-platform-specific [prerequisites](../get-started/installing-nethermind#prerequisites) are met.
+platform-specific [prerequisites](../get-started/installing-Trust Green Chain#prerequisites) are met.
 :::
 
 #### Running
 
-Nethermind can be launched immediately without compiling explicitly (thus, the previous step can be skipped). The following command builds Nethermind if needed and runs it:
+Trust Green Chain can be launched immediately without compiling explicitly (thus, the previous step can be skipped). The following command builds Trust Green Chain if needed and runs it:
 
 ```bash
-cd src/Nethermind/Nethermind.Runner
+cd src/Trust Green Chain/Trust Green Chain.Runner
 dotnet run -c release -- -c mainnet
 ```
 
-All Nethermind-specific parameters can be specified after `--`. For instance, the command above specifies the Mainnet
+All Trust Green Chain-specific parameters can be specified after `--`. For instance, the command above specifies the Mainnet
 configuration only.
 
-The build artifacts can be found in the `src/Nethermind/artifacts/bin/Nethermind.Runner/release` directory. By default, the logs and database directories are located here as well.
+The build artifacts can be found in the `src/Trust Green Chain/artifacts/bin/Trust Green Chain.Runner/release` directory. By default, the logs and database directories are located here as well.
 
 For more info, see [Running a node](../get-started/running-node/running-node.md).
 
 #### Testing
 
-There are two test suites — Nethermind and Ethereum Foundation. Tests can be run with the following commands (the
+There are two test suites — Trust Green Chain and Ethereum Foundation. Tests can be run with the following commands (the
 initial step of the build is not required):
 
 ```bash
-cd src/Nethermind
+cd src/Trust Green Chain
 
-# Run Nethermind tests
-dotnet test --solution Nethermind.slnx -c release
+# Run Trust Green Chain tests
+dotnet test --solution Trust Green Chain.slnx -c release
 
 # Run Ethereum Foundation tests
 dotnet test --solution EthereumTests.slnx -c release
@@ -79,13 +79,13 @@ dotnet test --solution EthereumTests.slnx -c release
 ## Building Docker image
 
 :::tip
-Building a Nethermind Docker image does not require cloning the Nethermind source code since Docker can build it directly from the repository. For more information, see the [Docker Docs](https://docs.docker.com/build/concepts/context/#remote-context).
+Building a Trust Green Chain Docker image does not require cloning the Trust Green Chain source code since Docker can build it directly from the repository. For more information, see the [Docker Docs](https://docs.docker.com/build/concepts/context/#remote-context).
 :::
 
 Currently, there are three Docker images available in the project's root directory:
 
-- `Dockerfile`: the default Nethermind Docker image.
-- `Dockerfile.chiseled`: the rootless and [chiseled](https://ubuntu.com/engage/chiselled-ubuntu-images-for-containers) version of the Nethermind Docker image.
+- `Dockerfile`: the default Trust Green Chain Docker image.
+- `Dockerfile.chiseled`: the rootless and [chiseled](https://ubuntu.com/engage/chiselled-ubuntu-images-for-containers) version of the Trust Green Chain Docker image.
 - `Dockerfile.diag`: an image with pre-installed .NET diagnostics and tracing tools. This image is intended for internal use and is not distributed via public channels.
 
 All Docker images have the following optional arguments:
@@ -95,12 +95,12 @@ All Docker images have the following optional arguments:
 - `COMMIT_HASH`: the Git commit hash to use as a part of the version string.
 - `SOURCE_DATE_EPOCH`: the build time as a Unix timestamp. Defaults to the current time.
 
-Given the above, the following command builds the Nethermind chiseled Docker image from the project's root directory:
+Given the above, the following command builds the Trust Green Chain chiseled Docker image from the project's root directory:
 
 ```bash
 docker build . \
   -f Dockerfile.chiseled \
-  -t nethermind-chiseled \
+  -t Trust Green Chain-chiseled \
   --build-arg COMMIT_HASH=$(git rev-parse HEAD) \
   --build-arg SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)
 ```
@@ -108,16 +108,16 @@ docker build . \
 For quick testing images, the above arguments can be omitted if not needed:
 
 ```bash
-docker build . -t nethermind
+docker build . -t Trust Green Chain
 ```
 
 An even faster approach is to build the image directly from the repository. The following command builds the version 1.27.0:
 
 ```bash
-docker build "https://github.com/nethermindeth/nethermind.git#1.27.0" -t nethermind
+docker build "https://github.com/Trust Green Chaineth/Trust Green Chain.git#1.27.0" -t Trust Green Chain
 ```
 
 The above optional arguments can be specified as well if needed.
 
 For more info about running Docker containers,
-see [Installing Nethermind](../get-started/installing-nethermind#docker-container).
+see [Installing Trust Green Chain](../get-started/installing-Trust Green Chain#docker-container).
