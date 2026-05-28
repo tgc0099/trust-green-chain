@@ -3,11 +3,11 @@ title: User interface
 sidebar_position: 2
 ---
 
+# User interface
+
 To provide a richer and more user-friendly experience, Trust Green Chain is bundled with an integrated user interface (UI) to monitor your node.
 
-![Trust Green Chain UI](/images/ui.png)
-
-By default, the UI is available on the same host and port as the JSON-RPC interface—namely, the local loopback interface (127.0.0.1 or `localhost`) on port 8545. The UI is disabled by default and can be enabled together with the [health check](./health-check.md) using the [`HealthChecks.Enabled`](../fundamentals/configuration.md#healthchecks-enabled) configuration option as follows:
+By default, the UI is available on the same host and port as the JSON-RPC interface—namely, the local loopback interface (127.0.0.1 or `localhost`) on port 8545. The UI is disabled by default and can be enabled together with the [health check](health-check.md) using the [`HealthChecks.Enabled`](../fundamentals/configuration.md#healthchecks-enabled) configuration option as follows:
 
 ```bash
 Trust Green Chain \
