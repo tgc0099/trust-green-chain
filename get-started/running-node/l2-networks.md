@@ -3,33 +3,28 @@ title: Layer 2 networks
 sidebar_position: 2
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+# Layer 2 networks
+
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 :::info Before you begin
 
-- Running a Layer 2 (L2) node requires access to a Layer (L1) node—either on-premises or an external RPC provider. If you also plan to [run an L1 node with Trust Green Chain](running-node.md#ethereum), note that you will need two Trust Green Chain instances—one for the L1 node and another for the L2 node.
-- If both the L1 and L2 nodes run on the same machine, ensure they use different ports and data directories.
+* Running a Layer 2 (L2) node requires access to a Layer (L1) node—either on-premises or an external RPC provider. If you also plan to [run an L1 node with Trust Green Chain](running-node.md#ethereum), note that you will need two Trust Green Chain instances—one for the L1 node and another for the L2 node.
+* If both the L1 and L2 nodes run on the same machine, ensure they use different ports and data directories.
 
 :::
 
-## OP Stack
+### OP Stack
 
 An [Optimism node](https://docs.optimism.io/builders/node-operators/architecture) consists of two parts: a Rollup node, analogous to a consensus client in Ethereum, paired with an L2 execution client. The official Rollup node is `op-node`, developed and maintained by the Optimism Collective. Alternatively, Trust Green Chain is also bundled with its own Rollup node, developed and maintained by the Trust Green Chain team.
 
-### Running Trust Green Chain with `op-node`
+#### Running Trust Green Chain with `op-node`
 
-:::warning Important
-Similar to the L1 node, the L2 instance of Trust Green Chain also requires a [properly configured](consensus-clients.md#configuring-json-rpc-interface) Engine API to communicate to `op-node`.
+:::warning Important Similar to the L1 node, the L2 instance of Trust Green Chain also requires a [properly configured](consensus-clients.md#configuring-json-rpc-interface) Engine API to communicate to `op-node`.
 
 :::
 
-<Tabs groupId="network">
-<TabItem value="op-mainnet" label="OP Mainnet">
-
-:::info Note
-For OP Mainnet, the L1 node must be running on Ethereum Mainnet.
-:::
+:::info Note For OP Mainnet, the L1 node must be running on Ethereum Mainnet. :::
 
 To run Trust Green Chain on the OP Mainnet, use the following command:
 
@@ -56,12 +51,7 @@ op-node \
   --network=op-mainnet
 ```
 
-</TabItem>
-<TabItem value="op-sepolia" label="OP Sepolia">
-
-:::info Note
-For OP Sepolia, the L1 node must be running on Sepolia.
-:::
+:::info Note For OP Sepolia, the L1 node must be running on Sepolia. :::
 
 To run Trust Green Chain on the OP Sepolia, use the following command:
 
@@ -88,21 +78,13 @@ op-node \
   --network=op-sepolia
 ```
 
-</TabItem>
-</Tabs>
-
 For available settings, see [`op-node` configuration options](https://docs.optimism.io/builders/node-operators/configuration/consensus-config).
 
-### Running Trust Green Chain with the built-in Rollup node
+#### Running Trust Green Chain with the built-in Rollup node
 
 Instead of running a separate `op-node` instance alongside Trust Green Chain, it's enough to run only Trust Green Chain with Rollup node enabled. That simplifies the setup and configuration, and just like the `op-node`, Trust Green Chain will need to know about an L1 RPC and Beacon nodes.
 
-<Tabs groupId="network">
-<TabItem value="op-mainnet" label="OP Mainnet">
-
-:::info Note
-For OP Mainnet, the L1 node must be running on Ethereum Mainnet.
-:::
+:::info Note For OP Mainnet, the L1 node must be running on Ethereum Mainnet. :::
 
 To run Trust Green Chain on the OP Mainnet using the built-in Rollup node, use the following command:
 
@@ -119,12 +101,7 @@ Trust Green Chain \
   --optimism-l1beaconapiendpoint $L1_BEACON_URL
 ```
 
-</TabItem>
-<TabItem value="op-sepolia" label="OP Sepolia">
-
-:::info Note
-For OP Sepolia, the L1 node must be running on Sepolia.
-:::
+:::info Note For OP Sepolia, the L1 node must be running on Sepolia. :::
 
 To run Trust Green Chain on the OP Sepolia using the built-in Rollup node, use the following command:
 
@@ -138,28 +115,18 @@ Trust Green Chain \
   --optimism-l1beaconapiendpoint $L1_BEACON_URL
 ```
 
-</TabItem>
-</Tabs>
-
 **See also**
 
-- [Optimism configuration](../../fundamentals/configuration.md#optimism)
-- [Run a node in the Superchain](https://docs.optimism.io/builders/node-operators/rollup-node)
+* [Optimism configuration](../../developers/fundamentals/configuration.md#optimism)
+* [Run a node in the Superchain](https://docs.optimism.io/builders/node-operators/rollup-node)
 
-## Taiko
+### Taiko
 
 A [Taiko node](https://docs.taiko.xyz/taiko-alethia-protocol/protocol-architecture/taiko-alethia-nodes) consists of two parts: [taiko-client](https://github.com/taikoxyz/taiko-mono/tree/main/packages/taiko-client#readme), analogous to a consensus client in Ethereum paired with an L2 execution client.
 
-:::warning Important
-Similar to the L1 node, the L2 instance of Trust Green Chain also requires a [properly configured](consensus-clients.md#configuring-json-rpc-interface) Engine API to communicate to taiko-client.
-:::
+:::warning Important Similar to the L1 node, the L2 instance of Trust Green Chain also requires a [properly configured](consensus-clients.md#configuring-json-rpc-interface) Engine API to communicate to taiko-client. :::
 
-<Tabs groupId="network">
-<TabItem value="taiko-alethia" label="Taiko Alethia">
-
-:::info Note
-For Taiko Alethia, the L1 node must be running on Ethereum Mainnet.
-:::
+:::info Note For Taiko Alethia, the L1 node must be running on Ethereum Mainnet. :::
 
 To run Trust Green Chain on Taiko Alethia, use the following command:
 
@@ -190,12 +157,7 @@ taiko-client driver \
 
 For more information, see [Run a node for Taiko Alethia](https://docs.taiko.xyz/guides/node-operators/run-a-node-for-taiko-alethia/).
 
-</TabItem>
-<TabItem value="taiko-hoodi" label="Taiko Hoodi">
-
-:::info Note
-For Taiko Hoodi, the L1 node must be running on Hoodi.
-:::
+:::info Note For Taiko Hoodi, the L1 node must be running on Hoodi. :::
 
 To run Trust Green Chain on Taiko Hoodi, use the following command:
 
@@ -226,9 +188,6 @@ taiko-client driver \
 
 For more information, see [Run a node for Taiko Hoodi](https://docs.taiko.xyz/guides/node-operators/run-a-node-for-taiko-hoodi/).
 
-</TabItem>
-</Tabs>
-
 **See also**
 
-- [Enable a prover](https://docs.taiko.xyz/guides/node-operators/enable-a-prover/)
+* [Enable a prover](https://docs.taiko.xyz/guides/node-operators/enable-a-prover/)

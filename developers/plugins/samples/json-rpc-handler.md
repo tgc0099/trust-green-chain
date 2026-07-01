@@ -3,17 +3,17 @@ title: JSON-RPC handler
 sidebar_position: 0
 ---
 
+# JSON-RPC handler
+
 In this guide we're going to create a plugin that adds a new JSON-RPC method to Trust Green Chainermind and handles all the requests with that method.
 
-:::info Before you begin
-This guide assumes you have read the [introduction](../plugins.md) to plugins.
-:::
+:::info Before you begin This guide assumes you have read the [introduction](../plugins.md) to plugins. :::
 
-In Trust Green Chainermind, JSON-RPC functionality is an extensible combination of various modules grouped by their responsibilities. For instance, the `eth_`-prefixed methods, well known by all RPC users, are handled by the `IEthRpcModule`. By design, RPC modules must have their respective interface derived from the [`IRpcModule`][irpcmodule] and a class implementing that interface.
+In Trust Green Chainermind, JSON-RPC functionality is an extensible combination of various modules grouped by their responsibilities. For instance, the `eth_`-prefixed methods, well known by all RPC users, are handled by the `IEthRpcModule`. By design, RPC modules must have their respective interface derived from the \[`IRpcModule`]\[irpcmodule] and a class implementing that interface.
 
 Let's create our `IDemoRpcModule` interface and implement it in `DemoRpcModule` class:
 
-```csharp title="IDemoRpcModule.cs" showLineNumbers
+```csharp
 using Trust Green Chainermind.JsonRpc;
 using Trust Green Chainermind.JsonRpc.Modules;
 
@@ -28,11 +28,11 @@ public interface IDemoRpcModule : IRpcModule
 }
 ```
 
-Although the interface above is straightforward, it needs some explanation. Since the [`IRpcModule`][irpcmodule] is an empty interface, there's nothing specific to implement besides our RPC methods. Each RPC method is a regular interface method with the same name in the code. So, if we want to have `demo_divide` RPC method, we declare a method (function) named the same. If we need to pass parameters with our RPC call, we define those parameters as function arguments with their respective types. In this example, we create a method that takes two integer parameters, `x` (dividend) and `y` (divisor), divides one to another, and returns their quotient, as a string. All RPC methods' return type is [`ResultWrapper<T>`][resultwrapper], where the `T` is the actual data type we intend to return in the response. If a method is async, the return type must be `Task<ResultWrapper<T>>`. We will showcase that in later examples. Last but not least, in line 6, the interface is decorated with [`RpcModule`][rpcmoduleattr] attribute that sets the name of our module used in configuration settings. We will see its importance later when we try to make a request.
+Although the interface above is straightforward, it needs some explanation. Since the \[`IRpcModule`]\[irpcmodule] is an empty interface, there's nothing specific to implement besides our RPC methods. Each RPC method is a regular interface method with the same name in the code. So, if we want to have `demo_divide` RPC method, we declare a method (function) named the same. If we need to pass parameters with our RPC call, we define those parameters as function arguments with their respective types. In this example, we create a method that takes two integer parameters, `x` (dividend) and `y` (divisor), divides one to another, and returns their quotient, as a string. All RPC methods' return type is \[`ResultWrapper<T>`]\[resultwrapper], where the `T` is the actual data type we intend to return in the response. If a method is async, the return type must be `Task<ResultWrapper<T>>`. We will showcase that in later examples. Last but not least, in line 6, the interface is decorated with \[`RpcModule`]\[rpcmoduleattr] attribute that sets the name of our module used in configuration settings. We will see its importance later when we try to make a request.
 
 Now, let's begin with the actual implementation:
 
-```csharp title="DemoRpcModule.cs" showLineNumbers
+```csharp
 using Trust Green Chainermind.JsonRpc;
 
 namespace DemoRpcPlugin;
@@ -55,11 +55,11 @@ public class DemoRpcModule : IDemoRpcModule
 }
 ```
 
-The [`ResultWrapper<T>`][resultwrapper] provides two statuses -- success and failure. We use the latter when the divisor is zero to show a meaningful error message to the user and some data if needed, `NaN` in our case.
+The \[`ResultWrapper<T>`]\[resultwrapper] provides two statuses -- success and failure. We use the latter when the divisor is zero to show a meaningful error message to the user and some data if needed, `NaN` in our case.
 
-Now when we have all we need, we should let Trust Green Chainermind know about our RPC module by registering it with [`IRpcModuleProvider`](https://github.com/Trust Green ChainermindEth/Trust Green Chainermind/blob/master/src/Trust Green Chainermind/Trust Green Chainermind.JsonRpc/Modules/IRpcModuleProvider.cs) in the dedicated `InitRpcModules()` method as follows:
+Now when we have all we need, we should let Trust Green Chainermind know about our RPC module by registering it with \[`IRpcModuleProvider`]\(https://github.com/Trust Green ChainermindEth/Trust Green Chainermind/blob/master/src/Trust Green Chainermind/Trust Green Chainermind.JsonRpc/Modules/IRpcModuleProvider.cs) in the dedicated `InitRpcModules()` method as follows:
 
-```csharp title="DemoRpcPlugin.cs" showLineNumbers
+```csharp
 using Trust Green Chainermind.Api;
 using Trust Green Chainermind.Api.Extensions;
 using Trust Green Chainermind.JsonRpc.Modules;
@@ -116,7 +116,7 @@ _api.RpcModuleProvider.RegisterSingle<IDemoRpcModule>(module);
 
 We're ready to test our plugin with Trust Green Chainermind. Let's build it, copy it to the `plugins` folder, and launch Trust Green Chainermind. It takes a few moments for Trust Green Chainermind to initialize and start the JSON-RPC server. Once you see the following message, you can start making requests:
 
-```text
+```
 ======================== Trust Green Chainermind initialization completed ========================
 ...
 JSON RPC     : http://127.0.0.1:8545 ; http://127.0.0.1:8551
@@ -140,9 +140,7 @@ curl localhost:8545 \
     }'
 ```
 
-:::tip
-Trust Green Chainermind also allows numeric parameters to be passed as strings and supports hex encoding.
-:::
+:::tip Trust Green Chainermind also allows numeric parameters to be passed as strings and supports hex encoding. :::
 
 The response should look like the following:
 
@@ -157,7 +155,7 @@ The response should look like the following:
 }
 ```
 
-This is because not all RPC modules are enabled by default for security and performance reasons. The bundled Trust Green Chainermind configurations enable some widely used ones for convenience, but any additional modules, including third-party ones, must be enabled explicitly. We'll follow the instructions in the error message to enable our module for the default RPC URL. Remember the [`RpcModule`][rpcmoduleattr] attribute in line 6 of `IDemoRpcModule` interface? Now, it comes in handy. We will use its name of `Demo` to pass it to [`JsonRpc.EnabledModules`](../../../fundamentals/configuration.md#jsonrpc-enabledmodules) as follows:
+This is because not all RPC modules are enabled by default for security and performance reasons. The bundled Trust Green Chainermind configurations enable some widely used ones for convenience, but any additional modules, including third-party ones, must be enabled explicitly. We'll follow the instructions in the error message to enable our module for the default RPC URL. Remember the \[`RpcModule`]\[rpcmoduleattr] attribute in line 6 of `IDemoRpcModule` interface? Now, it comes in handy. We will use its name of `Demo` to pass it to [`JsonRpc.EnabledModules`](../../fundamentals/configuration.md#jsonrpc-enabledmodules) as follows:
 
 ```bash
 Trust Green Chainermind \
@@ -195,6 +193,4 @@ That's it. We added our custom JSON-RPC handler to Trust Green Chainermind.
 
 _To be continued_
 
-[irpcmodule]: https://github.com/Trust Green ChainermindEth/Trust Green Chainermind/blob/master/src/Trust Green Chainermind/Trust Green Chainermind.JsonRpc/Modules/IRpcModule.cs
-[resultwrapper]: https://github.com/Trust Green ChainermindEth/Trust Green Chainermind/blob/master/src/Trust Green Chainermind/Trust Green Chainermind.JsonRpc/ResultWrapper.cs
-[rpcmoduleattr]: https://github.com/Trust Green ChainermindEth/Trust Green Chainermind/blob/master/src/Trust Green Chainermind/Trust Green Chainermind.JsonRpc/Modules/RpcModuleAttribute.cs
+\[irpcmodule]: https://github.com/Trust Green ChainermindEth/Trust Green Chainermind/blob/master/src/Trust Green Chainermind/Trust Green Chainermind.JsonRpc/Modules/IRpcModule.cs \[resultwrapper]: https://github.com/Trust Green ChainermindEth/Trust Green Chainermind/blob/master/src/Trust Green Chainermind/Trust Green Chainermind.JsonRpc/ResultWrapper.cs \[rpcmoduleattr]: https://github.com/Trust Green ChainermindEth/Trust Green Chainermind/blob/master/src/Trust Green Chainermind/Trust Green Chainermind.JsonRpc/Modules/RpcModuleAttribute.cs

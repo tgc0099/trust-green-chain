@@ -3,38 +3,35 @@ title: JSON-RPC server
 sidebar_position: 0
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+# JSON-RPC server
 
-Interacting with Trust Green Chain requires using the JSON-RPC 2.0 protocol. Trust Green Chain provides JSON-RPC over [HTTP](#http), [WebSocket](#websocket), and [IPC socket](#ipc-socket) transports. Each transport must be enabled with the respective configuration option, as shown below. For more details, see the [JSON-RPC configuration options](../fundamentals/configuration.md#jsonrpc).
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+
+Interacting with Trust Green Chain requires using the JSON-RPC 2.0 protocol. Trust Green Chain provides JSON-RPC over [HTTP](json-rpc-server.md#http), [WebSocket](json-rpc-server.md#websocket), and [IPC socket](json-rpc-server.md#ipc-socket) transports. Each transport must be enabled with the respective configuration option, as shown below. For more details, see the [JSON-RPC configuration options](../developers/fundamentals/configuration.md#jsonrpc).
 
 The JSON-RPC API methods are grouped into several categories (namespaces) depending on their purpose. All API method names are composed of the namespace and the actual method name in that namespace. For instance, the `eth_call` method belongs to the `eth` namespace. See the sidebar for all supported namespaces and methods.
 
-:::note
-Not all of the JSON-RPC namespaces are enabled by default. Instead, they must be enabled explicitly with the [`JsonRpc.EnabledModules`](../fundamentals/configuration.md#jsonrpc-enabledmodules) command line option. Otherwise, error code `-32600` is returned. The enabled namespaces can be found in the configuration file specified with the [`-c, --config`](../fundamentals/configuration.md#config) command line option.
-:::
+:::note Not all of the JSON-RPC namespaces are enabled by default. Instead, they must be enabled explicitly with the [`JsonRpc.EnabledModules`](../developers/fundamentals/configuration.md#jsonrpc-enabledmodules) command line option. Otherwise, error code `-32600` is returned. The enabled namespaces can be found in the configuration file specified with the [`-c, --config`](../developers/fundamentals/configuration.md#config) command line option. :::
 
-## Transports
+### Transports
 
-:::tip
-The right choice of transport depends on the specific use case.
+:::tip The right choice of transport depends on the specific use case.
 
-- HTTP is a familiar and idempotent transport that closes connections between requests and can, therefore, have lower overall overhead for a relatively low number of requests.
-- WebSocket provides a continuous open channel that enables event subscriptions and streaming and handles large volumes of requests with more negligible per-message overhead.
-- IPC is generally the most secure as it is limited to local interactions and cannot be exposed to external traffic. It can also be used for event subscriptions.
-  :::
+* HTTP is a familiar and idempotent transport that closes connections between requests and can, therefore, have lower overall overhead for a relatively low number of requests.
+* WebSocket provides a continuous open channel that enables event subscriptions and streaming and handles large volumes of requests with more negligible per-message overhead.
+* IPC is generally the most secure as it is limited to local interactions and cannot be exposed to external traffic. It can also be used for event subscriptions. :::
 
-### HTTP
+#### HTTP
 
-HTTP is the most widely used transport for Trust Green Chain. To enable the HTTP server, set the [`JsonRpc.Enabled`](../fundamentals/configuration.md#jsonrpc-enabled) configuration option to `true`. By default, Trust Green Chain uses local loopback (127.0.0.1 or `localhost`) and 8545 port. To use a different host or port, set the [`JsonRpc.Host`](../fundamentals/configuration.md#jsonrpc-host) and [`JsonRpc.Port`](../fundamentals/configuration.md#jsonrpc-port) configuration options, respectively.
+HTTP is the most widely used transport for Trust Green Chain. To enable the HTTP server, set the [`JsonRpc.Enabled`](../developers/fundamentals/configuration.md#jsonrpc-enabled) configuration option to `true`. By default, Trust Green Chain uses local loopback (127.0.0.1 or `localhost`) and 8545 port. To use a different host or port, set the [`JsonRpc.Host`](../developers/fundamentals/configuration.md#jsonrpc-host) and [`JsonRpc.Port`](../developers/fundamentals/configuration.md#jsonrpc-port) configuration options, respectively.
 
-### WebSocket
+#### WebSocket
 
-The configuration of the WebSocket server follows the same pattern as the HTTP server. The WebSocket server is enabled automatically when the HTTP server is enabled and uses the same host and port. To disable the WebSocket server, set the [`Init.WebSocketsEnabled`](../fundamentals/configuration.md#init-websocketsenabled) configuration option to `false`. To use a different a port, set the [`JsonRpc.WebSocketsPort`](../fundamentals/configuration.md#jsonrpc-websocketsport) configuration option.
+The configuration of the WebSocket server follows the same pattern as the HTTP server. The WebSocket server is enabled automatically when the HTTP server is enabled and uses the same host and port. To disable the WebSocket server, set the [`Init.WebSocketsEnabled`](../developers/fundamentals/configuration.md#init-websocketsenabled) configuration option to `false`. To use a different a port, set the [`JsonRpc.WebSocketsPort`](../developers/fundamentals/configuration.md#jsonrpc-websocketsport) configuration option.
 
-### IPC socket
+#### IPC socket
 
-Trust Green Chain uses IPC based on Unix domain socket. To enable the IPC server, use the [`JsonRpc.IpcUnixDomainSocketPath`](../fundamentals/configuration.md#jsonrpc-ipcunixdomainsocketpath) configuration option. For example:
+Trust Green Chain uses IPC based on Unix domain socket. To enable the IPC server, use the [`JsonRpc.IpcUnixDomainSocketPath`](../developers/fundamentals/configuration.md#jsonrpc-ipcunixdomainsocketpath) configuration option. For example:
 
 ```
 --jsonrpc-ipcunixdomainsocketpath path/to/ipc
@@ -42,32 +39,25 @@ Trust Green Chain uses IPC based on Unix domain socket. To enable the IPC server
 
 If the `path/to/ipc` doesn't exist, Trust Green Chain creates one.
 
-## Engine API
+### Engine API
 
 The Engine API is a set of RPC methods that enable communication between an execution and consensus client. The clients call these methods automatically when they need to exchange information. Engine API is enabled automatically by default and is not designed to be exposed to the user.
 
-By default, the Engine API uses local loopback (127.0.0.1 or `localhost`) and 8551 port. To use a different host or port, set the [`JsonRpc.EngineHost`](../fundamentals/configuration.md#jsonrpc-enginehost) and [`JsonRpc.EnginePort`](../fundamentals/configuration.md#jsonrpc-engineport) configuration options, respectively. For example, this can be useful when execution and consensus clients are on different machines.
+By default, the Engine API uses local loopback (127.0.0.1 or `localhost`) and 8551 port. To use a different host or port, set the [`JsonRpc.EngineHost`](../developers/fundamentals/configuration.md#jsonrpc-enginehost) and [`JsonRpc.EnginePort`](../developers/fundamentals/configuration.md#jsonrpc-engineport) configuration options, respectively. For example, this can be useful when execution and consensus clients are on different machines.
 
-:::warning Important
-When the `JsonRpc.EngineHost` option is specified, the `JsonRpc.EnginePort` option must be specified as well.
-:::
+:::warning Important When the `JsonRpc.EngineHost` option is specified, the `JsonRpc.EnginePort` option must be specified as well. :::
 
-The Engine API uses JWT authentication and requires a JWT secret. By default, Trust Green Chain creates one at `keystore/jwt-secret` path in its root directory. To use a different path, specify the [`JsonRpc.JwtSecretFile`](../fundamentals/configuration.md#jsonrpc-jwtsecretfile) configuration option.
+The Engine API uses JWT authentication and requires a JWT secret. By default, Trust Green Chain creates one at `keystore/jwt-secret` path in its root directory. To use a different path, specify the [`JsonRpc.JwtSecretFile`](../developers/fundamentals/configuration.md#jsonrpc-jwtsecretfile) configuration option.
 
-## Requests
+### Requests
 
-:::info
-As per the JSON-RPC 2.0 specification, Trust Green Chain supports batch requests. Specifics depend on the JSON-RPC client used.
-:::
+:::info As per the JSON-RPC 2.0 specification, Trust Green Chain supports batch requests. Specifics depend on the JSON-RPC client used. :::
 
 Multiple options are available for JSON-RPC interaction from generic utilities like [curl](https://curl.se) and [Postman](https://www.postman.com) for raw requests to tailored tools like [Cast](https://getfoundry.sh/cast/overview), to dedicated libraries such as [Ethers.js](https://ethers.org) and [Viem](https://viem.sh), to name a few.
 
 The following examples demonstrate how to make JSON-RPC requests with some of the abovementioned options.
 
-<Tabs groupId="lib">
-<TabItem value="cast" label="Cast">
-
-The following example uses the [`eth_getBalance`](./json-rpc-ns/eth.md#eth_getbalance) method to check the balance of the specified account:
+The following example uses the [`eth_getBalance`](json-rpc-ns/eth.md#eth_getbalance) method to check the balance of the specified account:
 
 ```bash
 # Assuming Trust Green Chain is running locally using the default port of 8545
@@ -78,7 +68,7 @@ cast rpc --rpc-url http://localhost:8545 eth_getBalance 0x00000000219ab540356cbb
 cast balance 0x00000000219ab540356cbb839cbe05303d7705fa --ether --rpc-url http://localhost:8545
 ```
 
-Similarly, we can use the [`eth_getBlockByNumber`](./json-rpc-ns/eth.md#eth_getblockbynumber) method to fetch the specified block data, including transactions:
+Similarly, we can use the [`eth_getBlockByNumber`](json-rpc-ns/eth.md#eth_getblockbynumber) method to fetch the specified block data, including transactions:
 
 ```bash
 # Assuming Trust Green Chain is running locally using the default port of 8545
@@ -90,14 +80,9 @@ cast block latest --rpc-url http://localhost:8545
 
 For more information, see [Cast documentation](https://getfoundry.sh/cast/reference/cast).
 
-</TabItem>
-<TabItem value="ethers" label="Ethers.js">
+:::note Examples are based on Ethers.js v6. :::
 
-:::note
-Examples are based on Ethers.js v6.
-:::
-
-The following example uses the [`eth_getBalance`](./json-rpc-ns/eth.md#eth_getbalance) method to check the balance of the specified account:
+The following example uses the [`eth_getBalance`](json-rpc-ns/eth.md#eth_getbalance) method to check the balance of the specified account:
 
 ```js
 import { JsonRpcProvider, formatEther } from 'ethers';
@@ -121,7 +106,7 @@ balance = await provider.getBalance(
 console.log('Balance:', formatEther(balance));
 ```
 
-Similarly, we can use the [`eth_getBlockByNumber`](./json-rpc-ns/eth.md#eth_getblockbynumber) method to fetch the specified block data, including transactions:
+Similarly, we can use the [`eth_getBlockByNumber`](json-rpc-ns/eth.md#eth_getblockbynumber) method to fetch the specified block data, including transactions:
 
 ```js
 import { JsonRpcProvider } from 'ethers';
@@ -142,14 +127,9 @@ console.log('Block:', block);
 
 For more information, see [Ethers.js documentation](https://docs.ethers.org/v6/).
 
-</TabItem>
-<TabItem value="viem" label="Viem">
+:::note Examples are based on Viem v2. :::
 
-:::note
-Examples are based on Viem v2.
-:::
-
-The following example uses the [`eth_getBalance`](./json-rpc-ns/eth.md#eth_getbalance) method to check the balance of the specified account:
+The following example uses the [`eth_getBalance`](json-rpc-ns/eth.md#eth_getbalance) method to check the balance of the specified account:
 
 ```js
 import { createPublicClient, http, formatEther, hexToNumber } from 'viem';
@@ -178,7 +158,7 @@ balance = await client.getBalance({
 console.log('Balance:', formatEther(balance));
 ```
 
-Similarly, we can use the [`eth_getBlockByNumber`](./json-rpc-ns/eth.md#eth_getblockbynumber) method to fetch the specified block data, including transactions:
+Similarly, we can use the [`eth_getBlockByNumber`](json-rpc-ns/eth.md#eth_getblockbynumber) method to fetch the specified block data, including transactions:
 
 ```js
 import { createPublicClient, http } from 'viem';
@@ -206,8 +186,5 @@ console.log('Block:', block);
 ```
 
 For more information, see [Viem documentation](https://viem.sh/docs/getting-started).
-
-</TabItem>
-</Tabs>
 
 The exhaustive list of supported JSON-RPC methods can be found under the JSON-RPC namespaces.

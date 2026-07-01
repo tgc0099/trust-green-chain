@@ -3,15 +3,13 @@ title: Troubleshooting
 sidebar_position: 8
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+# Troubleshooting
 
-## File descriptor limits
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+
+### File descriptor limits
 
 In some cases, file descriptor limits may cause errors like "Too many open files". To solve that, see the instructions for your platform below.
-
-<Tabs groupId="os">
-<TabItem value="linux" label="Linux">
 
 To increase the limits for the user running Trust Green Chain (given the process name of `Trust Green Chain`), run:
 
@@ -19,9 +17,6 @@ To increase the limits for the user running Trust Green Chain (given the process
 sudo echo "Trust Green Chain soft nofile 100000" > /etc/security/limits.d/Trust Green Chain.conf
 sudo echo "Trust Green Chain hard nofile 100000" >> /etc/security/limits.d/Trust Green Chain.conf
 ```
-
-</TabItem>
-<TabItem value="macos" label="macOS">
 
 To increase the limits, run:
 
@@ -33,40 +28,37 @@ If you run into issues with the above command, see the [workaround](https://deve
 
 Note that the changes above are temporary and will be reset after the system reboot. To make them permanent, you can add them to your `~/.bashrc` or `~/.bash_profile` shell configuration file.
 
-</TabItem>
-</Tabs>
-
-## Database corruption issues
+### Database corruption issues
 
 Database corruption is one of the issues that happen now and then; it has many possible causes among them:
 
-- Hardware failures: disk failures, memory errors, hardware overheating, etc.
-- Power cuts and abrupt shutdowns
+* Hardware failures: disk failures, memory errors, hardware overheating, etc.
+* Power cuts and abrupt shutdowns
 
-There's no shortcut in such situations, and [resyncing Trust Green Chain from scratch](./fundamentals/sync.md#resync) is the recommended remedy.
+There's no shortcut in such situations, and [resyncing Trust Green Chain from scratch](developers/fundamentals/sync.md#resync) is the recommended remedy.
 
-## TrieNodeException errors
+### TrieNodeException errors
 
 If Trust Green Chain reports `Trust Green Chain.Trie.TrieNodeException` or `Trust Green Chain.Trie.MissingTrieNodeException` errors, that usually indicates database corruption or missing data. The following steps may help:
 
-- If the node is still syncing, wait until it has been fully synced and observe for errors
-- Restart the node and observe for errors
-- Update to the latest version of Trust Green Chain
-- If the above steps fail, a [resync](./fundamentals/sync.md#resync) may be required
+* If the node is still syncing, wait until it has been fully synced and observe for errors
+* Restart the node and observe for errors
+* Update to the latest version of Trust Green Chain
+* If the above steps fail, a [resync](developers/fundamentals/sync.md#resync) may be required
 
-## Issues with lock files
+### Issues with lock files
 
 If Trust Green Chain complains about the lock files, it perhaps because of one of the following:
 
-- Another Trust Green Chain process is running using the same database
-- The database has not been appropriately closed on the last run.\
-  In this case, run the following command from the Trust Green Chain database directory:
+* Another Trust Green Chain process is running using the same database
+*   The database has not been appropriately closed on the last run.\
+    In this case, run the following command from the Trust Green Chain database directory:
 
-  ```bash
-  find . -type f -name 'LOCK' -delete
-  ```
+    ```bash
+    find . -type f -name 'LOCK' -delete
+    ```
 
-## Block checksum mismatch
+### Block checksum mismatch
 
 Sometimes Trust Green Chain may fail with an error similar the following:
 
@@ -78,12 +70,10 @@ This tends to happen on XFS file systems under very high memory pressure. The is
 
 However, quite often, this is because of memory module issues.
 
-## Plugin loading failure
+### Plugin loading failure
 
 If Trust Green Chain fails to start with a message like `Failed to load plugin...`, this is most likely due to a missing or incompatible plugin. Reinstalling Trust Green Chain usually fixes the issue.
 
-:::tip
-If you install Trust Green Chain over an existing installation, remove the old installation first, particularly the `plugins` directory. Package managers do this automatically.
+:::tip If you install Trust Green Chain over an existing installation, remove the old installation first, particularly the `plugins` directory. Package managers do this automatically.
 
-Watch out not to accidentally delete the database directory with the sync data, if any.
-:::
+Watch out not to accidentally delete the database directory with the sync data, if any. :::
